@@ -1,0 +1,40 @@
+# About — live archive — scraped 2026-09-11
+
+## Headline
+About Time Strong Health — In-home fitness and wellness built for the Parkinson's community
+
+## Body
+Time Strong Health provides personalized, one-on-one fitness and wellness programs delivered directly in your home. We work exclusively with individuals living with Parkinson's disease and other neurological movement disorders — and the people who care for them.
+
+Our programs are designed to complement or follow skilled rehabilitation, helping you maintain gains and continue building strength, balance, and confidence long after therapy ends. This is not physical therapy. This is ongoing fitness and wellness, guided by someone who understands your condition.
+
+Living with a movement disorder doesn't mean movement has to stop. The right program — designed around your condition, your goals, and your daily life — can make a meaningful difference in how you feel and what you're able to do.
+
+Every session at Time Strong Health is individualized and evidence-based. We focus on:
+- Functional Mobility — Moving with greater ease and confidence in daily activities
+- Strength and Resilience — Building the physical foundation to stay active and independent
+- Balance and Fall Prevention — Targeted strategies to improve stability and reduce injury risk
+- Long-Term Independence — Supporting your ability to live life on your terms
+
+Movement disorders affect the whole household. Partners and family members often become caregivers overnight — with little guidance on how to help safely or sustainably.
+
+Time Strong Health provides caregivers with practical education and hands-on coaching: safe transfer techniques, body mechanics for daily assistance, and strategies to protect your own physical and emotional well-being. You don't have to figure this out alone.
+
+## Differentiating points
+### Truly In-Home
+No gyms, no travel, no waiting rooms. Your sessions happen in your own home, on your schedule, in a familiar environment — which matters when you're managing a movement disorder.
+
+### Specialist-Level Expertise
+Our founder holds a Doctorate in Physical Therapy and is a Certified Senior Fitness Specialist with over a decade of experience in the fitness and wellness industry — including years of dedicated care to neurological populations. That clinical depth informs every program we build — delivered as fitness and wellness, not as therapy.
+
+### More Than Exercise
+We don't run generic workouts. Every session is built around high intensity, progressive fitness challenges designed to build the strength and endurance that keep you active and independent in real life.
+
+### A Relationship, Not a Transaction
+We're here for the long term. As your condition changes, your program adapts. We track progress, celebrate wins, and adjust when things get harder.
+
+## CTA
+Ready to Get Started? Call 404-458-7169
+
+## Disclaimer
+Time Strong Health provides wellness-based fitness and movement coaching focused on optimizing functional mobility and quality of life. Our services are not physical therapy, are not medically necessary treatments, and are not covered by Medicare or insurance.
