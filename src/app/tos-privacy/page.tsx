@@ -37,6 +37,14 @@ export default function TosPrivacyPage() {
         <p className="mt-4 text-base text-muted">
           Effective Date: February 3, 2025
         </p>
+        <div
+          role="status"
+          className="mt-6 max-w-3xl rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950"
+        >
+          <strong className="font-semibold">DRAFT — pending review.</strong>{" "}
+          Draft privacy/terms alignment for fitness &amp; wellness positioning —
+          pending Hector / counsel review before public cutover.
+        </div>
       </Section>
 
       <Section className="max-w-none">
@@ -98,12 +106,12 @@ export default function TosPrivacyPage() {
             </h3>
             <ul>
               <li>
-                <strong>Payment:</strong> Payments are made prior to services in
+                <strong>Payment:</strong> Payments are due prior to services, in
                 full or on a monthly basis depending on the service package
-                purchased. We do not bill Medicare but may accept private health
-                insurance for out-of-network reimbursement. Clients are
-                responsible for verifying coverage and submitting claims for
-                reimbursement.
+                purchased. Time Strong Health does not bill Medicare or
+                insurance for these fitness and wellness services. Clients are
+                responsible for understanding their own benefits, if any, and for
+                any submissions they choose to make independently.
               </li>
               <li>
                 <strong>Refunds:</strong> Refunds will be issued at the sole
@@ -198,12 +206,22 @@ export default function TosPrivacyPage() {
             </h3>
             <ul>
               <li>
-                Our collection and handling of personal data comply with HIPAA,
-                GDPR, and CCPA regulations.
+                We protect personal information we collect and use it as described
+                in our Privacy Policy.
               </li>
               <li>
-                We use secure methods to protect personal and health information.
-                However, we cannot guarantee absolute security.
+                California residents have rights under the California Consumer
+                Privacy Act (CCPA) as described in these Terms and our Privacy
+                Policy.
+              </li>
+              <li>
+                If we intentionally serve users in the European Union, applicable
+                GDPR rights may also apply; otherwise our primary audience is in
+                the United States.
+              </li>
+              <li>
+                We use secure methods to protect personal information. However,
+                we cannot guarantee absolute security.
               </li>
               <li>
                 By using our website, you acknowledge and agree to our Privacy
@@ -390,9 +408,10 @@ export default function TosPrivacyPage() {
             <p>
               At Time Strong Health, we are committed to protecting your privacy.
               This Privacy Policy describes how we collect, use, and safeguard
-              your information in compliance with HIPAA, the General Data
-              Protection Regulation (GDPR) (for EU residents), and the California
-              Consumer Privacy Act (CCPA) (for California residents).
+              your personal information as a fitness and wellness provider. We
+              protect personal information; California residents have CCPA rights
+              as described below. GDPR may apply if we intentionally serve EU
+              users.
             </p>
 
             <h3 className="!mt-8 text-xl font-serif font-bold text-foreground">
@@ -405,12 +424,14 @@ export default function TosPrivacyPage() {
                 and communication)
               </li>
               <li>
-                Health information (only as needed for providing wellness
-                services, in compliance with HIPAA)
+                Health-related notes that clients choose to share for fitness
+                programming — treated as confidential personal information, not
+                framed as HIPAA protected health information (PHI) under covered-
+                entity compliance
               </li>
               <li>
                 Payment-related information (processed securely by third-party
-                payment processors, if applicable in the future)
+                payment processors, if applicable)
               </li>
             </ul>
 
@@ -421,42 +442,49 @@ export default function TosPrivacyPage() {
             <ul>
               <li>
                 Scheduling and providing wellness-based functional training and
-                virtual consultations.
+                virtual consultations
               </li>
               <li>
                 Communicating with you about services, promotions, or policy
                 updates
               </li>
               <li>
-                Ensuring HIPAA-compliant handling of health information
+                Designing and adapting fitness programming based on information
+                you share with us
               </li>
             </ul>
 
             <h3 className="!mt-8 text-xl font-serif font-bold text-foreground">
-              3. HIPAA Compliance
+              3. Confidentiality of Health-Related Notes
             </h3>
             <ul>
               <li>
-                We protect your Protected Health Information (PHI) as required by
-                the Health Insurance Portability and Accountability Act (HIPAA).
+                When clients share health-related information to support fitness
+                programming, we treat that information as confidential personal
+                information.
               </li>
               <li>
-                Your health information will not be shared without your explicit
-                written consent, except as required by law.
+                We do not claim HIPAA covered-entity compliance for these fitness
+                and wellness services. Time Strong Health is not providing
+                medical care or billing as a covered entity under HIPAA for these
+                services.
               </li>
               <li>
-                We use secure methods to store and transmit PHI to prevent
-                unauthorized access.
+                Your personal information will not be shared without your consent,
+                except as required by law or as needed to operate our services
+                through trusted processors.
               </li>
             </ul>
 
             <h3 className="!mt-8 text-xl font-serif font-bold text-foreground">
               4. Your Privacy Rights
             </h3>
-            <p>Depending on your location, you may have the right to:</p>
+            <p>
+              Depending on your location, you may have the right to:
+            </p>
             <ul>
               <li>Request access to your personal data</li>
-              <li>Request corrections to your health information</li>
+              <li>Request corrections to your personal information</li>
               <li>
                 Request that we delete your personal data (subject to legal
                 retention policies)
@@ -464,9 +492,20 @@ export default function TosPrivacyPage() {
               <li>Opt out of marketing communications</li>
               <li>
                 File a complaint if you believe your privacy rights have been
-                violated.
+                violated
               </li>
             </ul>
+            <p>
+              <strong>California residents (CCPA):</strong> You may have rights to
+              know, delete, and opt out of certain sharing of personal
+              information, as further described in the California Privacy Rights
+              section of our Terms. Contact us to exercise these rights.
+            </p>
+            <p>
+              <strong>GDPR (if applicable):</strong> If we intentionally serve EU
+              users, additional rights under the GDPR may apply. Contact us with
+              questions about applicability.
+            </p>
 
             <h3 className="!mt-8 text-xl font-serif font-bold text-foreground">
               5. Data Security Measures
@@ -476,10 +515,17 @@ export default function TosPrivacyPage() {
               your data, including:
             </p>
             <ul>
-              <li>Encryption for data storage and transmission</li>
-              <li>Secure third-party scheduling systems</li>
-              <li>HIPAA-compliant handling of PHI</li>
+              <li>Encryption for data storage and transmission where appropriate</li>
+              <li>Secure third-party scheduling and payment processors</li>
+              <li>
+                Access controls and confidential handling of personal information
+                shared for fitness programming
+              </li>
             </ul>
+            <p>
+              No method of transmission or storage is completely secure; we
+              cannot guarantee absolute security.
+            </p>
 
             <h3 className="!mt-8 text-xl font-serif font-bold text-foreground">
               6. Third-Party Services &amp; External Links
@@ -516,11 +562,12 @@ export default function TosPrivacyPage() {
             </ul>
           </LegalBlock>
 
-          <p className="rounded-2xl border border-border bg-muted-bg p-4 text-sm text-muted">
-            Note: Legacy legal language referencing HIPAA appears in the source
-            archive and is preserved here for continuity. Fitness/wellness
-            positioning in the site brief may warrant a Clinical Safety / founder
-            review of these claims before production launch.
+          <p className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
+            <strong className="font-semibold">DRAFT — pending Hector / counsel
+            review before public cutover.</strong> This page reflects proposed
+            privacy/terms alignment for fitness &amp; wellness positioning
+            (private-pay; no HIPAA covered-entity claims). Do not treat as final
+            legal advice until counsel signs off.
           </p>
         </div>
       </Section>

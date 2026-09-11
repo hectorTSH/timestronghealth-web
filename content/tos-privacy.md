@@ -1,7 +1,8 @@
-# Terms & Conditions and Privacy Policy — live archive — scraped 2026-09-11
+# Terms & Conditions and Privacy Policy — DRAFT alignment archive
 
 Source: https://www.timestronghealth.com/tos-privacy
-Preserve legal text closely; flag HIPAA claims for Clinical Safety / Hector review (Canonical Brief notes fitness/wellness positioning; legacy legal language may need review).
+**DRAFT — pending Hector / counsel review before public cutover.**
+Draft privacy/terms alignment for fitness & wellness positioning — pending Hector / counsel review before public cutover.
 
 # Terms and Conditions
 
@@ -20,7 +21,7 @@ Welcome to Time Strong Health ("Company," "we," "our," or "us"). This website is
 - We reserve the right to remove any content deemed offensive, misleading, or in violation of these Terms of Use.
 
 3. Payment, Refund, and Cancellation Policy
-- Payment: Payments are made prior to services in full or on a monthly basis depending on the service package purchased. We do not bill Medicare but may accept private health insurance for out-of-network reimbursement. Clients are responsible for verifying coverage and submitting claims for reimbursement.
+- Payment: Payments are due prior to services, in full or on a monthly basis depending on the service package purchased. Time Strong Health does not bill Medicare or insurance for these fitness and wellness services. Clients are responsible for understanding their own benefits, if any, and for any submissions they choose to make independently.
 - Refunds: Refunds will be issued at the sole discretion of Time Strong Health LLC on a case-by-case basis.
 - Rescheduling: Clients may reschedule a session once with at least 24 hours’ notice without incurring a fee.
 
@@ -40,8 +41,10 @@ Welcome to Time Strong Health ("Company," "we," "our," or "us"). This website is
 - We use third-party scheduling and payment services. We are not responsible for the privacy practices or terms of these third-party services.
 
 7. Privacy & Data Protection
-- Our collection and handling of personal data comply with HIPAA, GDPR, and CCPA regulations.
-- We use secure methods to protect personal and health information. However, we cannot guarantee absolute security.
+- We protect personal information we collect and use it as described in our Privacy Policy.
+- California residents have rights under the California Consumer Privacy Act (CCPA) as described in these Terms and our Privacy Policy.
+- If we intentionally serve users in the European Union, applicable GDPR rights may also apply; otherwise our primary audience is in the United States.
+- We use secure methods to protect personal information. However, we cannot guarantee absolute security.
 - By using our website, you acknowledge and agree to our Privacy Policy.
 
 8. Children's Privacy
@@ -84,38 +87,44 @@ For any questions regarding these Terms & Conditions, please contact us at: Emai
 
 Effective Date: February 3, 2025
 
-At Time Strong Health, we are committed to protecting your privacy. This Privacy Policy describes how we collect, use, and safeguard your information in compliance with HIPAA, the General Data Protection Regulation (GDPR) (for EU residents), and the California Consumer Privacy Act (CCPA) (for California residents).
+At Time Strong Health, we are committed to protecting your privacy. This Privacy Policy describes how we collect, use, and safeguard your personal information as a fitness and wellness provider. We protect personal information; California residents have CCPA rights as described below. GDPR may apply if we intentionally serve EU users.
 
 1. Information We Collect
 We may collect the following personal information:
 - Name, email address, and phone number (for appointment scheduling and communication)
-- Health information (only as needed for providing wellness services, in compliance with HIPAA)
-- Payment-related information (processed securely by third-party payment processors, if applicable in the future)
+- Health-related notes that clients choose to share for fitness programming — treated as confidential personal information, not framed as HIPAA protected health information (PHI) under covered-entity compliance
+- Payment-related information (processed securely by third-party payment processors, if applicable)
 
 2. How We Use Your Information
 Your data is used for:
-- Scheduling and providing wellness-based functional training and virtual consultations.
+- Scheduling and providing wellness-based functional training and virtual consultations
 - Communicating with you about services, promotions, or policy updates
-- Ensuring HIPAA-compliant handling of health information
+- Designing and adapting fitness programming based on information you share with us
 
-3. HIPAA Compliance
-- We protect your Protected Health Information (PHI) as required by the Health Insurance Portability and Accountability Act (HIPAA).
-- Your health information will not be shared without your explicit written consent, except as required by law.
-- We use secure methods to store and transmit PHI to prevent unauthorized access.
+3. Confidentiality of Health-Related Notes
+- When clients share health-related information to support fitness programming, we treat that information as confidential personal information.
+- We do not claim HIPAA covered-entity compliance for these fitness and wellness services. Time Strong Health is not providing medical care or billing as a covered entity under HIPAA for these services.
+- Your personal information will not be shared without your consent, except as required by law or as needed to operate our services through trusted processors.
 
 4. Your Privacy Rights
 Depending on your location, you may have the right to:
 - Request access to your personal data
-- Request corrections to your health information
+- Request corrections to your personal information
 - Request that we delete your personal data (subject to legal retention policies)
 - Opt out of marketing communications
-- File a complaint if you believe your privacy rights have been violated.
+- File a complaint if you believe your privacy rights have been violated
+
+California residents (CCPA): You may have rights to know, delete, and opt out of certain sharing of personal information, as further described in the California Privacy Rights section of our Terms. Contact us to exercise these rights.
+
+GDPR (if applicable): If we intentionally serve EU users, additional rights under the GDPR may apply. Contact us with questions about applicability.
 
 5. Data Security Measures
 We implement technical and administrative safeguards to protect your data, including:
-- Encryption for data storage and transmission
-- Secure third-party scheduling systems
-- HIPAA-compliant handling of PHI
+- Encryption for data storage and transmission where appropriate
+- Secure third-party scheduling and payment processors
+- Access controls and confidential handling of personal information shared for fitness programming
+
+No method of transmission or storage is completely secure; we cannot guarantee absolute security.
 
 6. Third-Party Services & External Links
 - Our website may link to third-party services (e.g., scheduling software). We do not control their privacy policies.
@@ -128,3 +137,5 @@ We reserve the right to update this Privacy Policy at any time. Changes will be 
 For questions about this Privacy Policy, please contact us at:
 - Email: hector@timestronghealth.com
 - Mailing Address: Time Strong Health, 233 Arnold Mill Rd, Ste 300, Woodstock, GA 30188
+
+**DRAFT — pending Hector / counsel review before public cutover.** This archive reflects proposed privacy/terms alignment for fitness & wellness positioning (private-pay; no HIPAA covered-entity claims). Do not treat as final legal advice until counsel signs off.

@@ -8,7 +8,7 @@ const programs = [
   {
     title: "Balance & Fall Prevention",
     description:
-      "Evidence-based strategies to improve stability and reduce fall risk.",
+      "Practical, progressive strategies aimed at improving stability and supporting fall-risk reduction.",
   },
   {
     title: "Caregiver Education",
@@ -18,17 +18,17 @@ const programs = [
   {
     title: "In-Home Functional Fitness",
     description:
-      "Individualized sessions in your home focused on the movements that matter most for daily living.",
+      "One-on-one sessions in your home focused on daily-living movements.",
   },
   {
     title: "Strength & Mobility Programming",
     description:
-      "Progressive plans that adapt to your goals and your condition.",
+      "Progressive plans that adapt to your goals and abilities.",
   },
 ];
 
 const forIndividuals = [
-  "Functional strength and mobility training tailored to your condition and goals",
+  "Fitness training tailored to your goals and what you need for daily life",
   "Balance and fall-prevention strategies you can apply every day",
   "A consistent fitness partner who understands how movement disorders progress",
   "Programs that adapt as your needs change over time",
@@ -74,7 +74,7 @@ export default function HomePage() {
             <ul className="mt-4 space-y-3 text-lg text-foreground">
               <li>Moving with confidence</li>
               <li>Staying strong</li>
-              <li>Reducing fall risk</li>
+              <li>Supporting fall-risk reduction</li>
               <li>Privacy and comfort of your own home</li>
             </ul>
             <p className="mt-6 text-base text-muted">
@@ -94,7 +94,7 @@ export default function HomePage() {
         />
         <p className="max-w-3xl text-lg text-muted">
           We focus on what matters most in daily life: moving with confidence,
-          staying strong, and reducing fall risk — all in the comfort and
+          staying strong, and supporting fall-risk reduction — all in the comfort and
           privacy of your own home.
         </p>
       </Section>
@@ -141,7 +141,7 @@ export default function HomePage() {
               PT, DPT, brings over a decade of experience working with active
               adults with movement challenges — now applied through private-pay
               fitness and wellness programming designed to sustain mobility,
-              reduce fall risk, and support quality of life well beyond the
+              support fall-risk reduction goals, and support quality of life well beyond the
               episode of care.
             </p>
             <p className="mt-4 text-base text-muted">
@@ -185,7 +185,7 @@ export default function HomePage() {
           <p>
             A University of Georgia alumnus with a Doctorate in Physical Therapy
             from Georgia State University, Hector brings over 10 years of
-            experience optimizing movement and preventing falls in older adults,
+            experience optimizing movement and helping older adults work on fall-risk reduction through fitness,
             incorporating deep clinical knowledge into every session. Today, he
             applies that expertise through fitness and wellness programming —
             helping clients stay active, strong, and independent for as long as

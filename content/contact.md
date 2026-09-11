@@ -9,7 +9,7 @@ Click the link below to fill out a brief questionnaire and receive a call within
 (Note for rebuild: wire a simple contact form or mailto; do not invent a Wix form dependency.)
 
 ## Join Our Team
-At Time Strong Health, we are dedicated to helping individuals living with movement challenges move better, stay strong, and maintain independence. We are always open to connecting with passionate professionals who share our commitment to functional movement, wellness, and evidence-based training.
+At Time Strong Health, we are dedicated to helping individuals living with movement challenges move better, stay strong, and maintain independence. We are always open to connecting with passionate professionals who share our commitment to functional movement, wellness, and practical, progressive training.
 
 If you're a PT, OT, dietitian, or a fitness or wellness professional passionate about helping people with movement challenges and their loved ones, let's connect. Reach out to hector@timestronghealth.com to introduce yourself and explore collaboration opportunities.
 

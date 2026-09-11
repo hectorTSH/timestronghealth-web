@@ -24,7 +24,7 @@ const focusAreas = [
   {
     title: "Balance and Fall Prevention",
     description:
-      "Targeted strategies to improve stability and reduce injury risk",
+      "Targeted strategies aimed at improving stability and supporting safer everyday movement",
   },
   {
     title: "Long-Term Independence",
@@ -46,12 +46,12 @@ const differentiators = [
   {
     title: "More Than Exercise",
     description:
-      "We don't run generic workouts. Every session is built around high intensity, progressive fitness challenges designed to build the strength and endurance that keep you active and independent in real life.",
+      "Sessions emphasize progressive fitness challenges scaled to your abilities — with intensity adjusted for safety. Clients should have medical clearance for exercise when appropriate; this is fitness coaching, not therapy.",
   },
   {
     title: "A Relationship, Not a Transaction",
     description:
-      "We're here for the long term. As your condition changes, your program adapts. We track progress, celebrate wins, and adjust when things get harder.",
+      "We're here for the long term. As your needs change, your Exercise Program adapts. We track progress, celebrate wins, and adjust when things get harder.",
   },
 ];
 
@@ -83,12 +83,12 @@ export default function AboutPage() {
               This is not physical therapy.
             </strong>{" "}
             This is ongoing fitness and wellness, guided by someone who
-            understands your condition.
+            understands movement challenges.
           </p>
           <p>
             Living with a movement disorder doesn&apos;t mean movement has to
-            stop. The right program — designed around your condition, your
-            goals, and your daily life — can make a meaningful difference in how
+            stop. The right program — designed around your goals, abilities,
+            and daily life — can make a meaningful difference in how
             you feel and what you&apos;re able to do.
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
       <Section tone="muted">
         <SectionHeading
           eyebrow="Every session"
-          title="Individualized and evidence-based"
+          title="Personalized, progressive fitness"
           description="We focus on the foundations that support independence at home and in the community."
         />
         <div className="grid gap-6 sm:grid-cols-2">

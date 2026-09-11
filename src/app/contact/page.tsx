@@ -85,7 +85,7 @@ export default function ContactPage() {
                 living with movement challenges move better, stay strong, and
                 maintain independence. We are always open to connecting with
                 passionate professionals who share our commitment to functional
-                movement, wellness, and evidence-based training.
+                movement, wellness, and practical, progressive training.
               </p>
               <p className="mt-4 text-base text-muted">
                 If you&apos;re a PT, OT, dietitian, or a fitness or wellness
