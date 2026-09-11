@@ -73,9 +73,8 @@ Welcome to Time Strong Health ("Company," "we," "our," or "us"). This website is
 - You agree not to use or attempt to use the Website in any unlawful manner. You further agree not to commit any unlawful act or attempt to commit any unlawful act on or through the Website including, but not limited to: (1) hacking and other digital or physical attacks on the Website; (2) publishing vulgar, obscene, or defamatory material; or (3) any other unlawful act.
 
 13. Your California Privacy Rights
-- From time to time, we may make your personal information available to third parties for their marketing purposes. California law permits individuals who are California residents to request certain information about our disclosure of personal information to third parties for direct marketing purposes.
-- If you are a California resident and would like to make such a request, please submit your request in writing to info@timestronghealth.com.
-- If you do not want us to share your personal information with third parties, you may opt-out of this information sharing by emailing us at info@timestronghealth.com.
+- We do not sell, rent, or share your personal information with third parties for their marketing purposes. This aligns with our Privacy Policy.
+- If you are a California resident and would like to exercise CCPA rights (including to know, delete, or ask about any personal information practices), please submit your request in writing to info@timestronghealth.com.
 - In accordance with California Civil Code Sec. 1789.3, California resident users are entitled to know that they may file grievances and complaints with the California Department of Consumer Affairs, 1625 North Market Blvd., Suite N112, Sacramento, CA 95834; or by phone at 916-445-1254 or 800-952-5210; or by email to dca@dca.ca.gov.
 
 14. Changes to These Terms

@@ -25,7 +25,7 @@ Time Strong Health provides caregivers with practical education and hands-on coa
 No gyms, no travel, no waiting rooms. Your sessions happen in your own home, on your schedule, in a familiar environment — which matters when you're managing a movement disorder.
 
 ### Specialist-Level Expertise
-Our founder holds a Doctorate in Physical Therapy and is a Certified Senior Fitness Specialist with over a decade of experience in the fitness and wellness industry — including years of dedicated care to neurological populations. That clinical depth informs every program we build — delivered as fitness and wellness, not as therapy.
+Our founder holds a Doctorate in Physical Therapy and is a Certified Senior Fitness Specialist with over a decade of experience in the fitness and wellness industry — including years of dedicated work with neurological populations. That clinical depth informs every program we build — delivered as fitness and wellness, not as therapy.
 
 ### More Than Exercise
 Sessions emphasize progressive fitness challenges scaled to your abilities — with intensity adjusted for safety. Clients should have medical clearance for exercise when appropriate; this is fitness coaching, not therapy.

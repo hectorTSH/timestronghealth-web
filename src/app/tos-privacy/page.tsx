@@ -362,21 +362,15 @@ export default function TosPrivacyPage() {
             </h3>
             <ul>
               <li>
-                From time to time, we may make your personal information
-                available to third parties for their marketing purposes.
-                California law permits individuals who are California residents
-                to request certain information about our disclosure of personal
-                information to third parties for direct marketing purposes.
+                We do not sell, rent, or share your personal information with
+                third parties for their marketing purposes. This aligns with our
+                Privacy Policy.
               </li>
               <li>
-                If you are a California resident and would like to make such a
-                request, please submit your request in writing to
+                If you are a California resident and would like to exercise CCPA
+                rights (including to know, delete, or ask about any personal
+                information practices), please submit your request in writing to
                 info@timestronghealth.com.
-              </li>
-              <li>
-                If you do not want us to share your personal information with
-                third parties, you may opt-out of this information sharing by
-                emailing us at info@timestronghealth.com.
               </li>
               <li>
                 In accordance with California Civil Code Sec. 1789.3, California
