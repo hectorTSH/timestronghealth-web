@@ -41,7 +41,7 @@ One-on-one sessions in your home focused on daily-living movements.
 Progressive plans that adapt to your goals and abilities.
 
 ## Meet the Founder
-Dr. Hector A. Mallar, PT, DPT, SFS founded Time Strong Health after watching his own grandparents navigate the challenges of aging and movement disorders — and recognizing how few options existed between clinical rehab and going it alone.
+Dr. Hector A. Mallar, PT, DPT, CSFS (Certified Senior Fitness Specialist) founded Time Strong Health after watching his own grandparents navigate the challenges of aging and movement disorders — and recognizing how few options existed between clinical rehab and going it alone.
 
 A University of Georgia alumnus with a Doctorate in Physical Therapy from Georgia State University, Hector brings over 10 years of experience optimizing movement and helping older adults work on fall-risk reduction through fitness, incorporating deep clinical knowledge into every session. Today, he applies that expertise through fitness and wellness programming — helping clients stay active, strong, and independent for as long as possible.
 

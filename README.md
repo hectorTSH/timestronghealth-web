@@ -49,6 +49,11 @@ No outbound email provider is wired yet. The UI also offers `mailto:info@timestr
 - Markdown source archive lives in `content/` (reference copy; pages use typed React content aligned to that archive).
 - Logo: `public/logo-wordmark.png`
 
+
+## Image credits
+
+Calm, older-adult-appropriate stock photos live in `public/images/` (Pexels License). Full attribution is in [`public/images/CREDITS.md`](public/images/CREDITS.md). Images are illustrative only and do not depict Dr. Hector Mallar.
+
 ## Required disclaimer (Home / About / Contact)
 
 > Time Strong Health provides wellness-based fitness and movement coaching focused on optimizing functional mobility and quality of life. Our services are not physical therapy, are not medically necessary treatments, and are not covered by Medicare or insurance.

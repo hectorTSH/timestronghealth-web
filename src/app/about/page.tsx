@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Disclaimer } from "@/components/Disclaimer";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -59,18 +60,32 @@ export default function AboutPage() {
   return (
     <>
       <Section className="border-b border-border bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_70%)] pb-12 pt-16 sm:pt-20">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
-          About
-        </p>
-        <h1 className="max-w-4xl text-4xl sm:text-5xl">
-          In-home fitness and wellness built for the Parkinson&apos;s community
-        </h1>
-        <p className="mt-6 max-w-3xl text-xl text-muted">
-          Time Strong Health provides personalized, one-on-one fitness and
-          wellness programs delivered directly in your home. We work exclusively
-          with individuals living with Parkinson&apos;s disease and other
-          neurological movement disorders — and the people who care for them.
-        </p>
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
+              About
+            </p>
+            <h1 className="max-w-4xl text-4xl sm:text-5xl">
+              In-home fitness and wellness built for the Parkinson&apos;s community
+            </h1>
+            <p className="mt-6 max-w-3xl text-xl text-muted">
+              Time Strong Health provides personalized, one-on-one fitness and
+              wellness programs delivered directly in your home. We work exclusively
+              with individuals living with Parkinson&apos;s disease and other
+              neurological movement disorders — and the people who care for them.
+            </p>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-md">
+            <Image
+              src="/images/about-outdoors.jpg"
+              alt="An older couple walking together on a peaceful wooded path"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
       </Section>
 
       <Section>
@@ -111,17 +126,30 @@ export default function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading
-          eyebrow="Caregivers"
-          title="Movement disorders affect the whole household"
-          description="Partners and family members often become caregivers overnight — with little guidance on how to help safely or sustainably."
-        />
-        <p className="max-w-3xl text-lg text-muted">
-          Time Strong Health provides caregivers with practical education and
-          hands-on coaching: safe transfer techniques, body mechanics for daily
-          assistance, and strategies to protect your own physical and emotional
-          well-being. You don&apos;t have to figure this out alone.
-        </p>
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-border shadow-md">
+            <Image
+              src="/images/about-coaching.jpg"
+              alt="A fitness coach guiding an older adult through a seated stretch indoors"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <SectionHeading
+              eyebrow="Caregivers"
+              title="Movement disorders affect the whole household"
+              description="Partners and family members often become caregivers overnight — with little guidance on how to help safely or sustainably."
+            />
+            <p className="max-w-3xl text-lg text-muted">
+              Time Strong Health provides caregivers with practical education and
+              hands-on coaching: safe transfer techniques, body mechanics for daily
+              assistance, and strategies to protect your own physical and emotional
+              well-being. You don&apos;t have to figure this out alone.
+            </p>
+          </div>
+        </div>
       </Section>
 
       <Section tone="brand-soft">

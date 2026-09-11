@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Disclaimer } from "@/components/Disclaimer";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -9,21 +10,37 @@ const programs = [
     title: "Balance & Fall Prevention",
     description:
       "Practical, progressive strategies aimed at improving stability and supporting fall-risk reduction.",
+    image: "/images/walk-couple.jpg",
+    alt: "An older couple walking hand in hand along a sunny park path",
+    width: 1400,
+    height: 2100,
   },
   {
     title: "Caregiver Education",
     description:
       "Practical coaching for partners and family members — available in-home or online.",
+    image: "/images/caregiver-warmth.jpg",
+    alt: "A caregiver and older adult sharing a warm outdoor moment of support",
+    width: 1400,
+    height: 933,
   },
   {
     title: "In-Home Functional Fitness",
     description:
       "One-on-one sessions in your home focused on daily-living movements.",
+    image: "/images/fitness-home.jpg",
+    alt: "An older adult stretching on a yoga mat in a bright living room",
+    width: 1600,
+    height: 2400,
   },
   {
     title: "Strength & Mobility Programming",
     description:
       "Progressive plans that adapt to your goals and abilities.",
+    image: "/images/mobility-stretch.jpg",
+    alt: "An older adult performing a seated stretch on a mat at home",
+    width: 1400,
+    height: 933,
   },
 ];
 
@@ -44,8 +61,8 @@ export default function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-border bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_55%)]">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:items-center">
-          <div>
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:items-center">
+          <div className="relative z-10">
             <p className="animate-fade-up mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-brand-dark">
               In-home fitness & wellness · {siteConfig.serviceArea}
             </p>
@@ -67,22 +84,28 @@ export default function HomePage() {
             </div>
           </div>
 
-          <Card className="animate-fade-up-delay-2 border-brand/30 bg-white/90 p-8">
-            <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark">
-              What we focus on
-            </p>
-            <ul className="mt-4 space-y-3 text-lg text-foreground">
-              <li>Moving with confidence</li>
-              <li>Staying strong</li>
-              <li>Supporting fall-risk reduction</li>
-              <li>Privacy and comfort of your own home</li>
-            </ul>
-            <p className="mt-6 text-base text-muted">
-              Programs built to complement or follow skilled rehabilitation —
-              helping you maintain and build on your gains long after therapy
-              ends.
-            </p>
-          </Card>
+          <div className="animate-fade-up-delay-2 relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-md lg:aspect-[5/4]">
+            <Image
+              src="/images/hero-home.jpg"
+              alt="Fitness specialist guiding an older adult through a calm balance exercise in a bright home"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-white/95 p-4 shadow-sm backdrop-blur-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark">
+                What we focus on
+              </p>
+              <ul className="mt-2 grid gap-1 text-base text-foreground sm:grid-cols-2">
+                <li>Moving with confidence</li>
+                <li>Staying strong</li>
+                <li>Supporting fall-risk reduction</li>
+                <li>Comfort of your own home</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -160,40 +183,67 @@ export default function HomePage() {
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {programs.map((program) => (
-            <Card key={program.title}>
-              <div className="mb-4 h-1.5 w-12 rounded-full bg-brand" />
-              <h3 className="text-2xl">{program.title}</h3>
-              <p className="mt-3 text-base text-muted">{program.description}</p>
-            </Card>
+            <div
+              key={program.title}
+              className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition hover:shadow-md"
+            >
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted-bg">
+                <Image
+                  src={program.image}
+                  alt={program.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <div className="mb-4 h-1.5 w-12 rounded-full bg-brand" />
+                <h3 className="text-2xl">{program.title}</h3>
+                <p className="mt-3 text-base text-muted">{program.description}</p>
+              </div>
+            </div>
           ))}
         </div>
       </Section>
 
       <Section tone="dark" id="founder">
-        <SectionHeading
-          eyebrow="Meet the founder"
-          title="Dr. Hector A. Mallar, PT, DPT, SFS"
-          light
-        />
-        <div className="max-w-3xl space-y-5 text-lg text-neutral-300">
-          <p>
-            Dr. Hector A. Mallar, PT, DPT, SFS founded Time Strong Health after
-            watching his own grandparents navigate the challenges of aging and
-            movement disorders — and recognizing how few options existed between
-            clinical rehab and going it alone.
-          </p>
-          <p>
-            A University of Georgia alumnus with a Doctorate in Physical Therapy
-            from Georgia State University, Hector brings over 10 years of
-            experience optimizing movement and helping older adults work on fall-risk reduction through fitness,
-            incorporating deep clinical knowledge into every session. Today, he
-            applies that expertise through fitness and wellness programming —
-            helping clients stay active, strong, and independent for as long as
-            possible.
-          </p>
-          <Button href="/about" variant="primary">
-            Learn more about our approach
-          </Button>
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-white/10 shadow-lg lg:mx-0">
+            <Image
+              src="/images/session-guided.jpg"
+              alt="In-home fitness session with guided mobility support"
+              fill
+              sizes="(max-width: 1024px) 90vw, 40vw"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <SectionHeading
+              eyebrow="Meet the founder"
+              title="Dr. Hector A. Mallar, PT, DPT, CSFS (Certified Senior Fitness Specialist)"
+              light
+            />
+            <div className="max-w-3xl space-y-5 text-lg text-neutral-300">
+              <p>
+                Dr. Hector A. Mallar, PT, DPT, CSFS founded Time Strong Health after
+                watching his own grandparents navigate the challenges of aging and
+                movement disorders — and recognizing how few options existed between
+                clinical rehab and going it alone.
+              </p>
+              <p>
+                A University of Georgia alumnus with a Doctorate in Physical Therapy
+                from Georgia State University, Hector brings over 10 years of
+                experience optimizing movement and helping older adults work on fall-risk reduction through fitness,
+                incorporating deep clinical knowledge into every session. Today, he
+                applies that expertise through fitness and wellness programming —
+                helping clients stay active, strong, and independent for as long as
+                possible.
+              </p>
+              <Button href="/about" variant="primary">
+                Learn more about our approach
+              </Button>
+            </div>
+          </div>
         </div>
       </Section>
 
