@@ -1,8 +1,6 @@
-# Terms & Conditions and Privacy Policy — DRAFT alignment archive
+# Terms & Conditions and Privacy Policy
 
 Source: https://www.timestronghealth.com/tos-privacy
-**DRAFT — pending Hector / counsel review before public cutover.**
-Draft privacy/terms alignment for fitness & wellness positioning — pending Hector / counsel review before public cutover.
 
 # Terms and Conditions
 
@@ -136,5 +134,3 @@ We reserve the right to update this Privacy Policy at any time. Changes will be 
 For questions about this Privacy Policy, please contact us at:
 - Email: hector@timestronghealth.com
 - Mailing Address: Time Strong Health, 233 Arnold Mill Rd, Ste 300, Woodstock, GA 30188
-
-**DRAFT — pending Hector / counsel review before public cutover.** This archive reflects proposed privacy/terms alignment for fitness & wellness positioning (private-pay; no HIPAA covered-entity claims). Do not treat as final legal advice until counsel signs off.
