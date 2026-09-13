@@ -11,7 +11,9 @@ Used editorially to identify organizations we link out to. Trademarks remain the
 | `ani.png` | Atlanta Neuroscience Institute | Official site gray-text logo | Downloaded |
 | `acsm.png` | American College of Sports Medicine | Official ACSM site logo | Downloaded |
 | `ace.svg` | American Council on Exercise | Official ACE wordmark (recolored from white lockup for light cards) | Downloaded + recolor |
-| `nasm.svg` | National Academy of Sports Medicine | Typographic wordmark fallback | Official press-kit file not publicly downloadable |
+| `nasm.png` | National Academy of Sports Medicine | Editorial lockup matching the official brand artwork Hector supplied (2026-09-13) | Used in the Resources card |
+| `nasm-lockup.svg` | National Academy of Sports Medicine | Vector source for `nasm.png` | Editorial identification only |
+| `nasm.svg` | National Academy of Sports Medicine | Typographic wordmark fallback | Kept as archive; UI uses `nasm.png` |
 | `wpc.svg` | World Parkinson Coalition | Typographic wordmark fallback | Official site blocked hotlink/download (403) |
 
 No resource logos are hotlinked in the live UI.

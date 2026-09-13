@@ -10,9 +10,23 @@ import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-export function Header() {
+export type HeaderVariant = "default" | "home";
+
+type HeaderProps = {
+  /**
+   * `home` hides the tagline and places the BBB seal beside the TSH logo.
+   * Other pages keep the default header (tagline next to the logo, BBB on the right).
+   * When omitted, Home (`/`) resolves to `home` so the root layout can stay shared.
+   */
+  variant?: HeaderVariant;
+};
+
+export function Header({ variant }: HeaderProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const resolvedVariant: HeaderVariant =
+    variant ?? (pathname === "/" ? "home" : "default");
+  const isHome = resolvedVariant === "home";
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
@@ -25,13 +39,17 @@ export function Header() {
           >
             <SiteLogo priority />
           </Link>
-          <p className="hidden max-w-[16rem] text-[0.7rem] leading-snug text-muted sm:block md:max-w-[13rem] lg:max-w-[18rem] lg:text-xs">
-            {siteConfig.tagline}
-          </p>
+          {isHome ? (
+            <BbbSeal />
+          ) : (
+            <p className="hidden max-w-[16rem] text-[0.7rem] leading-snug text-muted sm:block md:max-w-[13rem] lg:max-w-[18rem] lg:text-xs">
+              {siteConfig.tagline}
+            </p>
+          )}
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <BbbSeal />
+          {isHome ? null : <BbbSeal />}
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
             {siteConfig.nav.map((item) => {
@@ -99,9 +117,11 @@ export function Header() {
           id="mobile-nav"
           className="border-t border-border bg-background px-4 py-4 lg:hidden"
         >
-          <p className="mb-3 text-sm leading-snug text-muted sm:hidden">
-            {siteConfig.tagline}
-          </p>
+          {isHome ? null : (
+            <p className="mb-3 text-sm leading-snug text-muted sm:hidden">
+              {siteConfig.tagline}
+            </p>
+          )}
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {siteConfig.nav.map((item) => (
               <Link

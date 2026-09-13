@@ -113,7 +113,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="What we do"
           title="One-on-one fitness that fits real life"
-          description="Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for people living with Parkinson's disease and other neurological movement disorders."
+          description="Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for older adults and people living with Parkinson's disease and other neurological movement disorders."
         />
         <p className="max-w-3xl text-lg text-muted">
           We focus on what matters most in daily life: moving with confidence,
