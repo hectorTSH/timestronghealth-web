@@ -67,7 +67,11 @@ export default function HomePage() {
               In-home fitness & wellness · {siteConfig.serviceArea}
             </p>
             <h1 className="animate-fade-up-delay-1 max-w-3xl text-4xl sm:text-5xl lg:text-6xl">
-              {siteConfig.tagline}
+              {siteConfig.tagline.split(/\b(Health|Strong|Time)\b/g).map((part, index) =>
+                index % 2 === 1 ? (
+                  <span key={index} className="text-brand">{part}</span>
+                ) : part,
+              )}
             </h1>
             <p className="animate-fade-up-delay-2 mt-6 max-w-2xl text-xl text-muted">
               Specialized in-home fitness and wellness programs for active
