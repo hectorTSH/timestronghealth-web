@@ -27,7 +27,7 @@ function LegalBlock({
 export default function TosPrivacyPage() {
   return (
     <>
-      <Section className="border-b border-border bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_70%)] pb-12 pt-16 sm:pt-20">
+      <Section className="hero-wash border-b border-border pb-12 pt-16 sm:pt-20">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
           Legal
         </p>

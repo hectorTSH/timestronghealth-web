@@ -1,25 +1,25 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BbbSeal } from "@/components/BbbSeal";
+import { SiteLogo } from "@/components/SiteLogo";
 import { siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-foreground text-white">
+    <footer className="border-t border-white/10 bg-black text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
         <div>
-          <Image
-            src="/logo-wordmark.png"
-            alt="Time Strong Health"
-            width={200}
-            height={50}
-            className="mb-4 h-12 w-auto brightness-0 invert"
-          />
+          <Link href="/" aria-label="Time Strong Health home">
+            <SiteLogo force="dark" className="mb-4 h-12 w-auto" />
+          </Link>
           <p className="max-w-md text-base text-neutral-300">
             {siteConfig.tagline}
           </p>
           <p className="mt-3 text-base text-neutral-400">
             Serving {siteConfig.serviceArea}
           </p>
+          <div className="mt-5">
+            <BbbSeal surface="dark" />
+          </div>
         </div>
 
         <div>
@@ -53,7 +53,12 @@ export function Footer() {
                 {siteConfig.email}
               </a>
             </li>
-            <li className="text-neutral-400">{siteConfig.address}</li>
+            <li className="text-neutral-400">
+              <span className="block font-semibold text-neutral-200">
+                {siteConfig.addressLabel}
+              </span>
+              {siteConfig.address}
+            </li>
           </ul>
         </div>
       </div>

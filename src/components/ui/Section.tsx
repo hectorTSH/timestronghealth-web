@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
 
 export function Section({
@@ -12,16 +13,16 @@ export function Section({
   tone?: "white" | "muted" | "dark" | "brand-soft";
 }) {
   const tones = {
-    white: "bg-white",
+    white: "bg-background",
     muted: "bg-muted-bg",
-    dark: "bg-foreground text-white",
+    dark: "bg-black text-white",
     "brand-soft": "bg-brand-soft",
   };
 
   return (
     <section id={id} className={cn("py-16 sm:py-20", tones[tone], className)}>
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        {children}
+        <Reveal>{children}</Reveal>
       </div>
     </section>
   );

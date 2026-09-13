@@ -8,13 +8,13 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Time Strong Health for in-home Parkinson's fitness and wellness coaching in Woodstock, Cherokee, and NW Metro Atlanta.",
+    "Contact Time Strong Health for in-home Parkinson's fitness and wellness coaching in Buckhead, Midtown, Sandy Springs, and Woodstock.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <Section className="border-b border-border bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_70%)] pb-12 pt-16 sm:pt-20">
+      <Section className="hero-wash border-b border-border pb-12 pt-16 sm:pt-20">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
           Contact
         </p>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                 </li>
                 <li>
                   <span className="font-semibold text-foreground">
-                    Mailing address:{" "}
+                    {siteConfig.addressLabel}:{" "}
                   </span>
                   {siteConfig.address}
                 </li>
@@ -88,10 +88,10 @@ export default function ContactPage() {
                 movement, wellness, and practical, progressive training.
               </p>
               <p className="mt-4 text-base text-muted">
-                If you&apos;re a PT, OT, dietitian, or a fitness or wellness
-                professional passionate about helping people with movement
-                challenges and their loved ones, let&apos;s connect. Reach out
-                to{" "}
+                If you&apos;re a PT, OT, or fitness professional who holds a
+                Parkinson&apos;s-focused certification, and you&apos;re
+                passionate about helping people with movement challenges and
+                their loved ones, let&apos;s connect. Reach out to{" "}
                 <a
                   href={`mailto:${siteConfig.careersEmail}`}
                   className="font-semibold text-foreground underline-offset-4 hover:underline"

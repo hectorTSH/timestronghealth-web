@@ -1,10 +1,10 @@
-# About — live archive — scraped 2026-09-11
+# About — site copy (updated 2026-09-13)
 
 ## Headline
 About Time Strong Health — In-home fitness and wellness built for the Parkinson's community
 
 ## Body
-Time Strong Health provides personalized, one-on-one fitness and wellness programs delivered directly in your home. We work exclusively with individuals living with Parkinson's disease and other neurological movement disorders — and the people who care for them.
+Time Strong Health provides personalized, one-on-one fitness and wellness programs delivered directly in your home. We work exclusively with older adults, focusing on those living with Parkinson's disease and other neurological movement disorders — and the people who care for them.
 
 Our programs are designed to complement or follow skilled rehabilitation, helping you maintain gains and continue building strength, balance, and confidence long after therapy ends. This is not physical therapy. This is ongoing fitness and wellness, guided by someone who understands movement challenges.
 
@@ -13,12 +13,12 @@ Living with a movement disorder doesn't mean movement has to stop. The right pro
 Every session at Time Strong Health is personalized, progressive fitness. We focus on:
 - Functional Mobility — Moving with greater ease and confidence in daily activities
 - Strength and Resilience — Building the physical foundation to stay active and independent
-- Balance and Fall Prevention — Targeted strategies aimed at improving stability and supporting safer everyday movement
+- Balance and Fall-Risk Reduction — Targeted strategies aimed at improving stability and supporting safer everyday movement
 - Long-Term Independence — Supporting your ability to live life on your terms
 
 Movement disorders affect the whole household. Partners and family members often become caregivers overnight — with little guidance on how to help safely or sustainably.
 
-Time Strong Health provides caregivers with practical education and hands-on coaching: safe transfer techniques, body mechanics for daily assistance, and strategies to protect your own physical and emotional well-being. You don't have to figure this out alone.
+Time Strong Health provides caregivers with practical education and coaching: strategies for supporting movement and daily activity safely, and ways to protect your own physical and emotional well-being. You don't have to figure this out alone.
 
 ## Differentiating points
 ### Truly In-Home
