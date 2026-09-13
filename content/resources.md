@@ -38,10 +38,10 @@ Logos are used editorially to identify organizations we link out to. See `public
 - Address: 1359 Broadway, Ste 1509, New York, NY 10018
 
 ## National Academy of Sports Medicine (NASM)
-- Senior fitness education: https://www.nasm.org/products/senior-fitness-specialization
+- Exercise library: https://www.nasm.org/resource-center/exercise-library
 
 ## American Council on Exercise (ACE)
-- Senior Fitness Specialist program: https://www.acefitness.org/continuing-education/specialist-programs/senior-fitness/
+- Blog: https://www.acefitness.org/resources/everyone/blog/
 
 ## American College of Sports Medicine (ACSM)
 - Aging / older-adult resources: https://acsm.org/education-resources/trending-topics-resources/aging/

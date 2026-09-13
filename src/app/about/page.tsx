@@ -42,7 +42,7 @@ const differentiators = [
   {
     title: "Specialist-Level Expertise",
     description:
-      "Our founder holds a Doctorate in Physical Therapy and is a Certified Senior Fitness Specialist with over a decade of experience in the fitness and wellness industry — including years of dedicated work with neurological populations. That clinical depth informs every program we build — delivered as fitness and wellness, not as therapy.",
+      "Our founder holds a Doctorate in Physical Therapy and is a Certified Senior Fitness Specialist with over a decade of experience in the fitness and wellness industry — including years of dedicated work with neurological populations. That clinical depth informs every program we build — bridging the gap between where rehab ends and functional independence begins.",
   },
   {
     title: "More Than Exercise",

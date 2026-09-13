@@ -9,7 +9,7 @@
 ## Intro
 Specialized in-home fitness and wellness programs for active adults living with Parkinson's disease and other movement disorders — and the people who care for them.
 
-Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for people living with Parkinson's disease and other neurological movement disorders.
+Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for older adults and people living with Parkinson's disease and other neurological movement disorders.
 
 We focus on what matters most in daily life: moving with confidence, staying strong, and supporting fall-risk reduction — all in the comfort and privacy of your own home.
 

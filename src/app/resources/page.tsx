@@ -95,19 +95,19 @@ const communityResources: Resource[] = [
 const fitnessEducation: Resource[] = [
   {
     name: "National Academy of Sports Medicine (NASM)",
-    href: "https://www.nasm.org/products/senior-fitness-specialization",
-    logo: "/images/resources/nasm.svg",
-    logoWidth: 280,
-    logoHeight: 72,
-    note: "Senior Fitness Specialization — education for coaching older adults.",
+    href: "https://www.nasm.org/resource-center/exercise-library",
+    logo: "/images/resources/nasm.png",
+    logoWidth: 760,
+    logoHeight: 200,
+    note: "Exercise library — movement demonstrations from the National Academy of Sports Medicine.",
   },
   {
     name: "American Council on Exercise (ACE)",
-    href: "https://www.acefitness.org/continuing-education/specialist-programs/senior-fitness/",
+    href: "https://www.acefitness.org/resources/everyone/blog/",
     logo: "/images/resources/ace.svg",
     logoWidth: 280,
     logoHeight: 129,
-    note: "Senior Fitness Specialist program and older-adult coaching education.",
+    note: "ACE Fitness blog — practical articles for everyday movement and wellness.",
   },
   {
     name: "American College of Sports Medicine (ACSM)",
