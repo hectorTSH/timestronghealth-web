@@ -7,6 +7,10 @@ export const siteConfig = {
   email: "info@timestronghealth.com",
   emailHref: "mailto:info@timestronghealth.com",
   careersEmail: "hector@timestronghealth.com",
+  social: {
+    facebook: "https://www.facebook.com/profile.php?id=61593509804372",
+    linkedin: "https://www.linkedin.com/company/time-strong-health-llc/",
+  },
   serviceArea: "BUCKHEAD / MIDTOWN / SANDY SPRINGS / WOODSTOCK",
   address: "233 Arnold Mill Rd, Ste 300, Woodstock, GA 30188",
   addressLabel: "Mailbox (no clinic or office)",

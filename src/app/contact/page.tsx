@@ -81,24 +81,45 @@ export default function ContactPage() {
             <Card>
               <h2 className="text-2xl">Join our team</h2>
               <p className="mt-3 text-base text-muted">
-                At Time Strong Health, we are dedicated to helping individuals
-                living with movement challenges move better, stay strong, and
-                maintain independence. We are always open to connecting with
-                passionate professionals who share our commitment to functional
-                movement, wellness, and practical, progressive training.
+                We&apos;re connecting with PTs, OTs, and fitness professionals
+                who hold a Parkinson&apos;s-focused certification and share our
+                commitment to helping people with movement challenges stay strong
+                and independent.
               </p>
               <p className="mt-4 text-base text-muted">
-                If you&apos;re a PT, OT, or fitness professional who holds a
-                Parkinson&apos;s-focused certification, and you&apos;re
-                passionate about helping people with movement challenges and
-                their loved ones, let&apos;s connect. Reach out to{" "}
+                Based anywhere in the United States? Explore a potential
+                independent-contractor satellite coach pilot in your community.
+                Visit our{" "}
+                <a
+                  href={siteConfig.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-foreground underline underline-offset-4 hover:text-brand-dark"
+                >
+                  LinkedIn
+                </a>{" "}
+                and{" "}
+                <a
+                  href={siteConfig.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-foreground underline underline-offset-4 hover:text-brand-dark"
+                >
+                  Facebook
+                </a>{" "}
+                pages for more information and pilot updates.
+              </p>
+              <p className="mt-4 text-base text-muted">
+                Interested? Email{" "}
                 <a
                   href={`mailto:${siteConfig.careersEmail}`}
                   className="font-semibold text-foreground underline-offset-4 hover:underline"
                 >
                   {siteConfig.careersEmail}
                 </a>{" "}
-                to introduce yourself and explore collaboration opportunities.
+                with your location, credentials, and a brief introduction. Pilot
+                participation is subject to market fit, diligence, and a written
+                agreement.
               </p>
             </Card>
 
