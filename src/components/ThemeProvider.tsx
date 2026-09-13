@@ -48,7 +48,7 @@ function subscribeTheme(onChange: () => void) {
 
 function getResolvedSnapshot(): ResolvedTheme {
   if (typeof document !== "undefined") {
-    return document.documentElement.classList.contains("dark")
+    return document.documentElement.getAttribute("data-theme") === "dark"
       ? "dark"
       : "light";
   }

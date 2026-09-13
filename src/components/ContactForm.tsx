@@ -64,6 +64,7 @@ export function ContactForm() {
           <input
             name="name"
             required
+            minLength={2}
             autoComplete="name"
             className={fieldClass}
             placeholder="Your name"
@@ -113,6 +114,7 @@ export function ContactForm() {
         <textarea
           name="message"
           required
+          minLength={10}
           rows={5}
           className={fieldClass}
           placeholder="How can we help?"
