@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 
 const programs = [
   {
-    title: "Balance & Fall Prevention",
+    title: "Balance & Fall-Risk Reduction",
     description:
       "Practical, progressive strategies aimed at improving stability and supporting fall-risk reduction.",
     image: "/images/walk-couple.jpg",
@@ -46,13 +46,13 @@ const programs = [
 
 const forIndividuals = [
   "Fitness training tailored to your goals and what you need for daily life",
-  "Balance and fall-prevention strategies you can apply every day",
+  "Balance and fall-risk reduction strategies you can apply every day",
   "A consistent fitness partner who understands how movement disorders progress",
   "Programs that adapt as your needs change over time",
 ];
 
 const forCaregivers = [
-  "Practical, hands-on techniques for safely assisting with movement and transfers",
+  "Practical strategies for supporting movement and daily activity safely",
   "Strategies to protect your own body while supporting your loved one",
   "Education and confidence-building so you feel prepared, not overwhelmed",
 ];
@@ -60,7 +60,7 @@ const forCaregivers = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-border bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_55%)]">
+      <section className="relative overflow-hidden border-b border-border hero-wash">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:items-center">
           <div className="relative z-10">
             <p className="animate-fade-up mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-brand-dark">
@@ -84,17 +84,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="animate-fade-up-delay-2 relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-md lg:aspect-[5/4]">
+          <div className="animate-fade-up-delay-2 relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md lg:aspect-[5/4]">
             <Image
               src="/images/hero-home.jpg"
               alt="Fitness specialist guiding an older adult through a calm balance exercise in a bright home"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover"
+              className="img-fade object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-white/95 p-4 shadow-sm backdrop-blur-sm">
+            <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-border bg-background/95 p-4 shadow-sm backdrop-blur-sm">
               <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark">
                 What we focus on
               </p>
@@ -160,8 +160,8 @@ export default function HomePage() {
             <h3 className="text-2xl">For referring physicians</h3>
             <p className="mt-5 text-base leading-relaxed text-muted">
               Time Strong Health bridges the gap between skilled rehabilitation
-              and long-term functional fitness. Our founder, Dr. Hector Mallar,
-              PT, DPT, brings over a decade of experience working with active
+              and long-term functional fitness. Our founder, Hector Mallar, PT,
+              DPT, CSFS, brings over a decade of experience working with active
               adults with movement challenges — now applied through private-pay
               fitness and wellness programming designed to sustain mobility,
               support fall-risk reduction goals, and support quality of life well beyond the
@@ -185,7 +185,7 @@ export default function HomePage() {
           {programs.map((program) => (
             <div
               key={program.title}
-              className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition hover:shadow-md"
+              className="overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0"
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted-bg">
                 <Image
@@ -193,7 +193,7 @@ export default function HomePage() {
                   alt={program.alt}
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
-                  className="object-cover"
+                  className="img-fade object-cover"
                 />
               </div>
               <div className="p-6">
@@ -208,24 +208,24 @@ export default function HomePage() {
 
       <Section tone="dark" id="founder">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-white/10 shadow-lg lg:mx-0">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 shadow-lg lg:mx-0">
             <Image
-              src="/images/session-guided.jpg"
-              alt="In-home fitness session with guided mobility support"
+              src="/images/founder-headshot.png"
+              alt="Hector Mallar, founder of Time Strong Health"
               fill
               sizes="(max-width: 1024px) 90vw, 40vw"
-              className="object-cover"
+              className="img-fade object-cover object-top"
             />
           </div>
           <div>
             <SectionHeading
               eyebrow="Meet the founder"
-              title="Dr. Hector A. Mallar, PT, DPT, CSFS (Certified Senior Fitness Specialist)"
+              title="Hector A. Mallar, PT, DPT, CSFS (Certified Senior Fitness Specialist)"
               light
             />
             <div className="max-w-3xl space-y-5 text-lg text-neutral-300">
               <p>
-                Dr. Hector A. Mallar, PT, DPT, CSFS founded Time Strong Health after
+                Hector A. Mallar, PT, DPT, CSFS founded Time Strong Health after
                 watching his own grandparents navigate the challenges of aging and
                 movement disorders — and recognizing how few options existed between
                 clinical rehab and going it alone.

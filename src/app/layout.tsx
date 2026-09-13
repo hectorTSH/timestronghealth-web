@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Caudex, Source_Sans_3 } from "next/font/google";
+import { ViewTransition } from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { siteConfig } from "@/lib/site";
+import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
 const caudex = Caudex({
@@ -24,7 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Specialized in-home fitness and wellness programs for active adults living with Parkinson's disease and other movement disorders in Woodstock, Cherokee, and NW Metro Atlanta.",
+    "Specialized in-home fitness and wellness programs for active adults living with Parkinson's disease and other movement disorders in Buckhead, Midtown, Sandy Springs, and Woodstock.",
   metadataBase: new URL("https://www.timestronghealth.com"),
   openGraph: {
     title: siteConfig.name,
@@ -43,11 +46,19 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${caudex.variable} ${sourceSans.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <ViewTransition>
+            <main className="page-enter flex-1">{children}</main>
+          </ViewTransition>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Time Strong Health — in-home fitness and wellness built for the Parkinson's community in Woodstock, Cherokee, and NW Metro Atlanta.",
+    "About Time Strong Health — in-home fitness and wellness built for the Parkinson's community in Buckhead, Midtown, Sandy Springs, and Woodstock.",
 };
 
 const focusAreas = [
@@ -23,7 +23,7 @@ const focusAreas = [
       "Building the physical foundation to stay active and independent",
   },
   {
-    title: "Balance and Fall Prevention",
+    title: "Balance and Fall-Risk Reduction",
     description:
       "Targeted strategies aimed at improving stability and supporting safer everyday movement",
   },
@@ -59,7 +59,7 @@ const differentiators = [
 export default function AboutPage() {
   return (
     <>
-      <Section className="border-b border-border bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_70%)] pb-12 pt-16 sm:pt-20">
+      <Section className="hero-wash border-b border-border pb-12 pt-16 sm:pt-20">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
@@ -71,18 +71,19 @@ export default function AboutPage() {
             <p className="mt-6 max-w-3xl text-xl text-muted">
               Time Strong Health provides personalized, one-on-one fitness and
               wellness programs delivered directly in your home. We work exclusively
-              with individuals living with Parkinson&apos;s disease and other
-              neurological movement disorders — and the people who care for them.
+              with older adults, focusing on those living with Parkinson&apos;s
+              disease and other neurological movement disorders — and the people
+              who care for them.
             </p>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-md">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md">
             <Image
               src="/images/about-outdoors.jpg"
               alt="An older couple walking together on a peaceful wooded path"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover"
+              className="img-fade object-cover"
             />
           </div>
         </div>
@@ -127,13 +128,13 @@ export default function AboutPage() {
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-border shadow-md">
+          <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md">
             <Image
               src="/images/about-coaching.jpg"
               alt="A fitness coach guiding an older adult through a seated stretch indoors"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="img-fade object-cover"
             />
           </div>
           <div>
@@ -144,8 +145,8 @@ export default function AboutPage() {
             />
             <p className="max-w-3xl text-lg text-muted">
               Time Strong Health provides caregivers with practical education and
-              hands-on coaching: safe transfer techniques, body mechanics for daily
-              assistance, and strategies to protect your own physical and emotional
+              coaching: strategies for supporting movement and daily activity
+              safely, and ways to protect your own physical and emotional
               well-being. You don&apos;t have to figure this out alone.
             </p>
           </div>

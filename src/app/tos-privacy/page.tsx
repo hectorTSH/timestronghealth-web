@@ -27,7 +27,7 @@ function LegalBlock({
 export default function TosPrivacyPage() {
   return (
     <>
-      <Section className="border-b border-border bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_70%)] pb-12 pt-16 sm:pt-20">
+      <Section className="hero-wash border-b border-border pb-12 pt-16 sm:pt-20">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
           Legal
         </p>
@@ -37,14 +37,6 @@ export default function TosPrivacyPage() {
         <p className="mt-4 text-base text-muted">
           Effective Date: February 3, 2025
         </p>
-        <div
-          role="status"
-          className="mt-6 max-w-3xl rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950"
-        >
-          <strong className="font-semibold">DRAFT — pending review.</strong>{" "}
-          Draft privacy/terms alignment for fitness &amp; wellness positioning —
-          pending Hector / counsel review before public cutover.
-        </div>
       </Section>
 
       <Section className="max-w-none">
@@ -555,14 +547,6 @@ export default function TosPrivacyPage() {
               </li>
             </ul>
           </LegalBlock>
-
-          <p className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
-            <strong className="font-semibold">DRAFT — pending Hector / counsel
-            review before public cutover.</strong> This page reflects proposed
-            privacy/terms alignment for fitness &amp; wellness positioning
-            (private-pay; no HIPAA covered-entity claims). Do not treat as final
-            legal advice until counsel signs off.
-          </p>
         </div>
       </Section>
     </>

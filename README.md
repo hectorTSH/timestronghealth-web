@@ -2,7 +2,7 @@
 
 Next.js (App Router) + TypeScript + Tailwind rebuild of [timestronghealth.com](https://www.timestronghealth.com).
 
-Brand: black / white / `#F7931A`, real wordmark logo, large type for older-adult readability.
+Brand: black / white / `#F7931A`, real wordmark (light + dark), BBB Accredited Business seal, large type for older-adult readability. Light/dark mode follows system preference and a persisted user toggle.
 
 ## Stack
 
@@ -47,12 +47,15 @@ No outbound email provider is wired yet. The UI also offers `mailto:info@timestr
 ## Content & assets
 
 - Markdown source archive lives in `content/` (reference copy; pages use typed React content aligned to that archive).
-- Logo: `public/logo-wordmark.png`
+- Logos: `public/logo-wordmark.png` (light), `public/logo-dark.png` (dark)
+- Founder headshot: `public/images/founder-headshot.png`
+- BBB seals: `public/bbb/`
+- Resource logos: `public/images/resources/` (see credits there)
 
 
 ## Image credits
 
-Calm, older-adult-appropriate stock photos live in `public/images/` (Pexels License). Full attribution is in [`public/images/CREDITS.md`](public/images/CREDITS.md). Images are illustrative only and do not depict Dr. Hector Mallar.
+Calm, older-adult-appropriate stock photos live in `public/images/` (Pexels License). Full attribution is in [`public/images/CREDITS.md`](public/images/CREDITS.md). Stock images are illustrative only. The Meet the Founder portrait is Hector Mallar’s own headshot.
 
 ## Required disclaimer (Home / About / Contact)
 

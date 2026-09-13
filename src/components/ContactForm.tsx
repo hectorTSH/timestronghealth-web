@@ -3,8 +3,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 type Status = "idle" | "submitting" | "success" | "error";
+
+const fieldClass =
+  "w-full rounded-xl border border-border bg-background px-4 py-3 text-base text-foreground outline-none ring-brand placeholder:text-muted/70 focus:ring-2";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -60,8 +64,9 @@ export function ContactForm() {
           <input
             name="name"
             required
+            minLength={2}
             autoComplete="name"
-            className="w-full rounded-xl border border-border bg-white px-4 py-3 text-base outline-none ring-brand focus:ring-2"
+            className={fieldClass}
             placeholder="Your name"
           />
         </label>
@@ -72,7 +77,7 @@ export function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            className="w-full rounded-xl border border-border bg-white px-4 py-3 text-base outline-none ring-brand focus:ring-2"
+            className={fieldClass}
             placeholder="you@example.com"
           />
         </label>
@@ -85,7 +90,7 @@ export function ContactForm() {
             name="phone"
             type="tel"
             autoComplete="tel"
-            className="w-full rounded-xl border border-border bg-white px-4 py-3 text-base outline-none ring-brand focus:ring-2"
+            className={fieldClass}
             placeholder="Optional"
           />
         </label>
@@ -93,7 +98,7 @@ export function ContactForm() {
           <span className="mb-2 block font-semibold text-foreground">I am a</span>
           <select
             name="audience"
-            className="w-full rounded-xl border border-border bg-white px-4 py-3 text-base outline-none ring-brand focus:ring-2"
+            className={fieldClass}
             defaultValue="individual"
           >
             <option value="individual">Client / individual</option>
@@ -109,14 +114,19 @@ export function ContactForm() {
         <textarea
           name="message"
           required
+          minLength={10}
           rows={5}
-          className="w-full rounded-xl border border-border bg-white px-4 py-3 text-base outline-none ring-brand focus:ring-2"
+          className={fieldClass}
           placeholder="How can we help?"
         />
       </label>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <Button type="submit" disabled={status === "submitting"}>
+        <Button
+          type="submit"
+          disabled={status === "submitting"}
+          className={cn(status === "submitting" && "btn-busy")}
+        >
           {status === "submitting" ? "Sending…" : "Send message"}
         </Button>
         <a
@@ -130,12 +140,19 @@ export function ContactForm() {
       {message ? (
         <p
           role="status"
-          className={
-            status === "success"
-              ? "rounded-xl bg-brand-soft px-4 py-3 text-base text-foreground"
-              : "rounded-xl bg-red-50 px-4 py-3 text-base text-red-800"
-          }
+          className={cn(
+            "rounded-xl px-4 py-3 text-base",
+            status === "success" &&
+              "form-success bg-brand-soft text-foreground",
+            status === "error" &&
+              "form-error bg-red-50 text-red-800 dark:bg-red-950 dark:text-red-100",
+          )}
         >
+          {status === "success" ? (
+            <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand text-black">
+              ✓
+            </span>
+          ) : null}
           {message}
         </p>
       ) : null}

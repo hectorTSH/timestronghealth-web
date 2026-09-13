@@ -33,7 +33,7 @@ export function Button({
   ...props
 }: ButtonAsButton | ButtonAsLink) {
   const classes = cn(
-    "inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-60",
+    "inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold transition duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-60 motion-reduce:transition-none",
     variants[variant],
     className,
   );
