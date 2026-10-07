@@ -19,7 +19,7 @@ Brand: black / white / `#F7931A`, real wordmark (light + dark), BBB Accredited B
 | `/` | Home — hero, service area, audiences, programs, founder, disclaimer |
 | `/about` | About + differentiators + disclaimer |
 | `/resources` | Community resource directory |
-| `/contact` | Contact details, careers note, validated contact form + disclaimer |
+| `/contact` | Contact details, call and email buttons, careers note, and disclaimer |
 | `/tos-privacy` | Terms & Conditions and Privacy Policy (preserved from live archive) |
 
 ## Local development
@@ -38,11 +38,9 @@ npm run build
 npm start
 ```
 
-## Contact form (v1)
+## Contact
 
-`POST /api/contact` validates name, email, and message, logs the payload server-side, and returns `{ ok: true }`.
-
-No outbound email provider is wired yet. The UI also offers `mailto:info@timestronghealth.com`.
+The contact page offers Call and Email buttons. The phone number and `info@` address come from `src/lib/site.ts` (`tel:` and `mailto:` links). There is no contact form and no `/api/contact` endpoint.
 
 ## Content & assets
 

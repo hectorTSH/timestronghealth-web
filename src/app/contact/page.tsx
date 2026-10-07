@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ContactForm } from "@/components/ContactForm";
 import { Disclaimer } from "@/components/Disclaimer";
+import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { siteConfig } from "@/lib/site";
@@ -30,15 +30,34 @@ export default function ContactPage() {
           >
             1-404-458-7169
           </a>{" "}
-          or fill in our contact form. We typically respond within 24–48 hours.
+          or email us using the buttons below. We typically respond within
+          24–48 hours.
         </p>
       </Section>
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <Card className="p-6 sm:p-8">
-            <h2 className="mb-6 text-3xl">Contact form</h2>
-            <ContactForm />
+            <h2 className="mb-6 text-3xl">Call or email</h2>
+            <div className="flex flex-col gap-4">
+              <Button
+                href={siteConfig.phoneHref}
+                className="min-h-16 w-full px-6 py-4"
+              >
+                <span className="font-serif text-2xl font-bold leading-snug">
+                  Call {siteConfig.phone}
+                </span>
+              </Button>
+              <Button
+                href={siteConfig.emailHref}
+                variant="ghost"
+                className="min-h-16 w-full border-2 px-6 py-4"
+              >
+                <span className="text-center font-serif text-2xl font-bold leading-snug wrap-anywhere">
+                  Email {siteConfig.email}
+                </span>
+              </Button>
+            </div>
           </Card>
 
           <div className="space-y-6">
