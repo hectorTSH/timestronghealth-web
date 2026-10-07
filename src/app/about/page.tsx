@@ -179,8 +179,12 @@ export default function AboutPage() {
               <Button href={siteConfig.phoneHref}>
                 Call {siteConfig.phone}
               </Button>
-              <Button href="/contact" variant="ghost">
-                Contact form
+              <Button
+                href={siteConfig.emailHref}
+                variant="ghost"
+                className="max-w-full whitespace-normal"
+              >
+                Email {siteConfig.email}
               </Button>
             </div>
           </div>

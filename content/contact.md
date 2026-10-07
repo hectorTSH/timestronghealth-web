@@ -3,7 +3,7 @@
 If you have any questions or would like more information, we would love to help.
 
 ## Contact Us
-For general inquiries call or text 1-404-458-7169 or fill in our contact form.
+For general inquiries call or text 1-404-458-7169 or email us using the buttons below.
 
 Service area: BUCKHEAD / MIDTOWN / SANDY SPRINGS / WOODSTOCK
 
