@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Caudex, Source_Sans_3 } from "next/font/google";
 import { ViewTransition } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -59,6 +60,7 @@ export default function RootLayout({
           </ViewTransition>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
