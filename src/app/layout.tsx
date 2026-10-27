@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   description:
     "Specialized in-home fitness and wellness programs for active adults living with Parkinson's disease and other movement disorders in Buckhead, Midtown, Sandy Springs, and Woodstock.",
-  metadataBase: new URL("https://www.timestronghealth.com"),
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.tagline,
