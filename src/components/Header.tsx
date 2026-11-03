@@ -72,7 +72,7 @@ export function Header({ variant }: HeaderProps) {
                 </Link>
               );
             })}
-            <Button href={siteConfig.phoneHref} className="ml-2">
+            <Button href={siteConfig.phoneHref} className="ml-2 whitespace-nowrap">
               Call {siteConfig.phone}
             </Button>
           </nav>
@@ -133,7 +133,7 @@ export function Header({ variant }: HeaderProps) {
                 {item.label}
               </Link>
             ))}
-            <Button href={siteConfig.phoneHref} className="mt-2 w-full">
+            <Button href={siteConfig.phoneHref} className="mt-2 w-full whitespace-nowrap">
               Call {siteConfig.phone}
             </Button>
           </nav>

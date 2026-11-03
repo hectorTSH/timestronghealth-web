@@ -230,8 +230,8 @@ export default function HomePage() {
             <div className="max-w-3xl space-y-5 text-lg text-neutral-300">
               <p>
                 Hector A. Mallar, DPT, CSFS founded Time Strong Health after
-                watching his own grandparents navigate the challenges of aging and
-                movement challenges — and recognizing how few options existed between
+                watching his own grandparents navigate through movement
+                challenges, and recognizing how few options existed between
                 clinical rehab and going it alone.
               </p>
               <p>
