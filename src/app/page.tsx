@@ -47,7 +47,7 @@ const programs = [
 const forIndividuals = [
   "Fitness training tailored to your goals and what you need for daily life",
   "Balance and fall-risk reduction strategies you can apply every day",
-  "A consistent fitness partner who understands how movement disorders progress",
+  "A consistent fitness partner who understands how movement challenges progress",
   "Programs that adapt as your needs change over time",
 ];
 
@@ -75,8 +75,8 @@ export default function HomePage() {
             </h1>
             <p className="animate-fade-up-delay-2 mt-6 max-w-2xl text-xl text-muted">
               Specialized in-home fitness and wellness programs for active
-              adults living with Parkinson&apos;s disease and other movement
-              disorders — and the people who care for them.
+              adults living with Parkinson&apos;s Disease and other neurological
+              movement challenges, and the people who care for them.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={siteConfig.phoneHref}>
@@ -117,7 +117,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="What we do"
           title="One-on-one fitness that fits real life"
-          description="Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for older adults and people living with Parkinson's disease and other neurological movement disorders."
+          description="Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for older adults and people living with Parkinson's Disease and other neurological movement challenges."
         />
         <p className="max-w-3xl text-lg text-muted">
           We focus on what matters most in daily life: moving with confidence,
@@ -135,7 +135,7 @@ export default function HomePage() {
           <Card>
             <h3 className="text-2xl">For individuals</h3>
             <p className="mt-2 text-base text-muted">
-              With Parkinson&apos;s & movement disorders
+              With Parkinson&apos;s & movement challenges
             </p>
             <ul className="mt-5 space-y-3 text-base">
               {forIndividuals.map((item) => (
@@ -164,8 +164,8 @@ export default function HomePage() {
             <h3 className="text-2xl">For referring physicians</h3>
             <p className="mt-5 text-base leading-relaxed text-muted">
               Time Strong Health bridges the gap between skilled rehabilitation
-              and long-term functional fitness. Our founder, Hector Mallar, PT,
-              DPT, CSFS, brings over a decade of experience working with active
+              and long-term functional fitness. Our founder, Hector A. Mallar,
+              DPT, CSFS, brings over 15 years of experience working with active
               adults with movement challenges — now applied through private-pay
               fitness and wellness programming designed to sustain mobility,
               support fall-risk reduction goals, and support quality of life well beyond the
@@ -224,20 +224,19 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="Meet the founder"
-              title="Hector A. Mallar, PT, DPT, CSFS (Certified Senior Fitness Specialist)"
+              title="Hector A. Mallar, DPT, CSFS"
               light
             />
             <div className="max-w-3xl space-y-5 text-lg text-neutral-300">
               <p>
-                Hector A. Mallar, PT, DPT, CSFS founded Time Strong Health after
+                Hector A. Mallar, DPT, CSFS founded Time Strong Health after
                 watching his own grandparents navigate the challenges of aging and
-                movement disorders — and recognizing how few options existed between
+                movement challenges — and recognizing how few options existed between
                 clinical rehab and going it alone.
               </p>
               <p>
-                A University of Georgia alumnus with a Doctorate in Physical Therapy
-                from Georgia State University, Hector brings over 10 years of
-                experience optimizing movement and helping older adults work on fall-risk reduction through fitness,
+                Hector brings over 15 years of experience optimizing movement and
+                helping older adults work on fall-risk reduction through exercise,
                 incorporating deep clinical knowledge into every session. Today, he
                 applies that expertise through fitness and wellness programming —
                 helping clients stay active, strong, and independent for as long as
@@ -260,7 +259,7 @@ export default function HomePage() {
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button href={siteConfig.phoneHref}>
-                {siteConfig.phone}
+                Call {siteConfig.phone}
               </Button>
               <Button href={siteConfig.emailHref} variant="ghost">
                 {siteConfig.email}

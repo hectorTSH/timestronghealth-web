@@ -8,6 +8,9 @@ type SiteLogoProps = {
   priority?: boolean;
 };
 
+// Official vector lockup (5910x4824 canvas cropped to the artwork, transparent
+// background, brand orange accent). Served as-is rather than optimized so the
+// SVG stays crisp and the transparency survives.
 export function SiteLogo({
   className,
   force,
@@ -18,12 +21,13 @@ export function SiteLogo({
   if (force === "dark") {
     return (
       <Image
-        src="/logo-dark.png"
+        src="/logo-dark.svg"
         alt="Time Strong Health"
-        width={220}
-        height={186}
+        width={5612}
+        height={4389}
         className={imgClass}
         priority={priority}
+        unoptimized
       />
     );
   }
@@ -31,12 +35,13 @@ export function SiteLogo({
   if (force === "light") {
     return (
       <Image
-        src="/logo-wordmark.png"
+        src="/logo-wordmark.svg"
         alt="Time Strong Health"
-        width={220}
-        height={186}
+        width={5612}
+        height={4389}
         className={imgClass}
         priority={priority}
+        unoptimized
       />
     );
   }
@@ -44,20 +49,22 @@ export function SiteLogo({
   return (
     <>
       <Image
-        src="/logo-wordmark.png"
+        src="/logo-wordmark.svg"
         alt="Time Strong Health"
-        width={220}
-        height={186}
+        width={5612}
+        height={4389}
         className={cn(imgClass, "dark:hidden")}
         priority={priority}
+        unoptimized
       />
       <Image
-        src="/logo-dark.png"
+        src="/logo-dark.svg"
         alt=""
-        width={220}
-        height={186}
+        width={5612}
+        height={4389}
         className={cn(imgClass, "hidden dark:block")}
         priority={priority}
+        unoptimized
         aria-hidden
       />
     </>

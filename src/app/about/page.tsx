@@ -37,17 +37,17 @@ const differentiators = [
   {
     title: "Truly In-Home",
     description:
-      "No gyms, no travel, no waiting rooms. Your sessions happen in your own home, on your schedule, in a familiar environment — which matters when you're managing a movement disorder.",
+      "No gyms, no travel, no waiting rooms. Your sessions happen in your own home, on your schedule, in a familiar environment — which matters when you're managing movement challenges.",
   },
   {
     title: "Specialist-Level Expertise",
     description:
-      "Our founder holds a Doctorate in Physical Therapy and is a Certified Senior Fitness Specialist with over a decade of experience in the fitness and wellness industry — including years of dedicated work with neurological populations. That clinical depth informs every program we build — bridging the gap between where rehab ends and functional independence begins.",
+      "Our founder holds a doctorate in physical therapy with specialist certifications in senior fitness and fall prevention, backed by over 15 years of experience in the fitness and wellness industry — including years of dedicated work with neurological populations. That clinical depth informs every program we build, bridging the gap between where rehab ends and functional independence begins.",
   },
   {
     title: "More Than Exercise",
     description:
-      "Sessions emphasize progressive fitness challenges scaled to your abilities — with intensity adjusted for safety. Clients should have medical clearance for exercise when appropriate; this is fitness coaching, not therapy.",
+      "Sessions emphasize progressive fitness challenges scaled to your abilities, with intensity adjusted for safety. Clients should have medical clearance for exercise when appropriate; this is fitness coaching, not therapy.",
   },
   {
     title: "A Relationship, Not a Transaction",
@@ -72,7 +72,7 @@ export default function AboutPage() {
               Time Strong Health provides personalized, one-on-one fitness and
               wellness programs delivered directly in your home. We work exclusively
               with older adults, focusing on those living with Parkinson&apos;s
-              disease and other neurological movement disorders — and the people
+              Disease and other neurological movement challenges — and the people
               who care for them.
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function AboutPage() {
             understands movement challenges.
           </p>
           <p>
-            Living with a movement disorder doesn&apos;t mean movement has to
+            Living with movement challenges doesn&apos;t mean movement has to
             stop. The right program — designed around your goals, abilities,
             and daily life — can make a meaningful difference in how
             you feel and what you&apos;re able to do.
@@ -140,7 +140,7 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               eyebrow="Caregivers"
-              title="Movement disorders affect the whole household"
+              title="Movement challenges affect the whole household"
               description="Partners and family members often become caregivers overnight — with little guidance on how to help safely or sustainably."
             />
             <p className="max-w-3xl text-lg text-muted">
