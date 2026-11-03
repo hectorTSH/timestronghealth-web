@@ -24,6 +24,7 @@ const GMAIL_SEND_ENDPOINT = "https://gmail.googleapis.com/gmail/v1/users/me/mess
 const DEFAULT_RESEND_FROM = "Time Strong Health Website <website@timestronghealth.com>";
 const DEFAULT_GMAIL_FROM = "hector@timestronghealth.com";
 const DEFAULT_CONTACT_TO = "info@timestronghealth.com";
+const DEFAULT_CONTACT_BCC = "hector@timestronghealth.com";
 
 const MSG_UNSUPPORTED_CONTENT_TYPE = "Unsupported content type; expected application/json.";
 const MSG_INVALID_BODY = "Invalid request body.";
@@ -105,7 +106,12 @@ function getRecipients(): string[] {
     .filter(Boolean);
 }
 
+function getBccRecipients(): string {
+  return (process.env.CONTACT_BCC || DEFAULT_CONTACT_BCC).trim();
+}
+
 async function sendViaResend(submission: ContactSubmission): Promise<void> {
+  const bcc = getBccRecipients();
   const response = await fetch(RESEND_ENDPOINT, {
     method: "POST",
     headers: {
@@ -115,6 +121,7 @@ async function sendViaResend(submission: ContactSubmission): Promise<void> {
     body: JSON.stringify({
       from: process.env.CONTACT_FROM || DEFAULT_RESEND_FROM,
       to: getRecipients(),
+      ...(bcc ? { bcc: [bcc] } : {}),
       reply_to: submission.email,
       subject: `Website message from ${submission.name}`,
       text: buildContactEmailText(submission),
@@ -153,6 +160,7 @@ async function requestGmailAccessToken(): Promise<string> {
 // packages).
 function buildMimeMessage(options: {
   to: string;
+  bcc: string;
   from: string;
   replyTo: string;
   subject: string;
@@ -160,6 +168,7 @@ function buildMimeMessage(options: {
 }): string {
   const headerLines = [
     `To: ${stripHeaderBreaks(options.to)}`,
+    ...(options.bcc.trim() ? [`Bcc: ${stripHeaderBreaks(options.bcc)}`] : []),
     `From: ${stripHeaderBreaks(options.from)}`,
     `Reply-To: ${stripHeaderBreaks(options.replyTo)}`,
     `Subject: ${stripHeaderBreaks(options.subject)}`,
@@ -179,6 +188,7 @@ async function sendViaGmail(submission: ContactSubmission): Promise<void> {
 
   const mime = buildMimeMessage({
     to: getRecipients().join(", "),
+    bcc: getBccRecipients(),
     from: process.env.CONTACT_FROM_EMAIL || DEFAULT_GMAIL_FROM,
     replyTo: submission.email,
     subject: `Website message from ${submission.name}`,
