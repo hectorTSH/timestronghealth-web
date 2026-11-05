@@ -33,14 +33,14 @@ async function postJson(body, headers = { "Content-Type": "application/json" }) 
   });
 }
 
-test("Athens page speaks to clients, caregivers, and clinicians without inventing a launch date", async () => {
+test("short Athens page is a January 2027 partnership landing with three brief audiences", async () => {
   const response = await fetch(new URL("/athens", baseUrl));
   assert.equal(response.status, 200);
   const html = await response.text();
   const text = mainText(html);
 
   assert.match(text, /Strong is coming to Athens/);
-  assert.match(text, /Coming soon/);
+  assert.match(text, /Coming January 2027/);
   assert.match(text, /Hector A\. Mallar, DPT, CSFS/);
   assert.match(text, /ATH/);
   assert.match(text, /fall risk reduction/);
@@ -52,8 +52,9 @@ test("Athens page speaks to clients, caregivers, and clinicians without inventin
   assert.match(text, /A doctor's referral with medical clearance, or a completed PAR-Q\+, is required/);
   assert.match(text, /complement or follow skilled rehabilitation/);
   assert.match(text, /Time Strong Health™/);
-  assert.match(text, /Over 15 years/);
-  assert.match(text, /Buckhead, Midtown, Sandy Springs, and Woodstock/);
+  assert.match(text, /Older adults/);
+  assert.match(text, /Caregivers/);
+  assert.match(text, /Referring clinicians/);
   assert.match(html, /id="for-you"/);
   assert.match(html, /id="for-caregivers"/);
   assert.match(html, /id="for-clinicians"/);
@@ -62,17 +63,36 @@ test("Athens page speaks to clients, caregivers, and clinicians without inventin
   assert.match(html, /value="older-adult"/);
   assert.match(html, /value="caregiver"/);
   assert.match(html, /value="clinician"/);
-  assert.match(html, /Join the Athens list/);
-  assert.match(html, /Join the list for your family/);
-  assert.match(html, /Join the list as a clinician/);
+  assert.match(html, /Get on the Athens list/);
+  assert.match(html, /href="\/athens"/);
+  assert.doesNotMatch(html, /href="\/athens-full"/);
 
+  assert.doesNotMatch(text, /Coming soon/i);
   assert.doesNotMatch(text, /Early 2027/i);
-  assert.doesNotMatch(text, /2027/);
   assert.doesNotMatch(text, /AHN/);
   assert.doesNotMatch(text, /fall prevention/i);
   assert.doesNotMatch(text, /®/);
   assert.doesNotMatch(text, /\$/);
   assert.doesNotMatch(text, /\b(price|pricing|\$\d|\/month|per session)\b/i);
+});
+
+test("the longer Athens page is archived off the public nav", async () => {
+  const response = await fetch(new URL("/athens-full", baseUrl));
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  const text = mainText(html);
+  assert.match(text, /Four things, then we can begin/);
+  assert.match(text, /What to know before you refer/);
+  assert.match(text, /Hector A\. Mallar, DPT, CSFS/);
+  assert.match(text, /Ryan Marsh — Owner, Athens Personal Fitness/);
+  assert.match(text, /Toni Haynes — Lead Trainer, Athens/);
+  assert.doesNotMatch(html, /href="\/athens-full"/);
+
+  const home = await fetch(new URL("/", baseUrl));
+  const homeHtml = await home.text();
+  assert.match(homeHtml, /href="\/athens"/);
+  assert.match(homeHtml, />Athens</);
+  assert.doesNotMatch(homeHtml, /href="\/athens-full"/);
 });
 
 test("Athens interest mail stays on the existing TSH inbox addresses", () => {

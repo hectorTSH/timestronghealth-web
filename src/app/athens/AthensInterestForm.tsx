@@ -265,8 +265,8 @@ export function AthensInterestForm() {
 
       <p className="text-base text-muted">
         This note goes to the Time Strong Health™ inbox. If the form can&apos;t send,
-        call {siteConfig.phone} or email {siteConfig.email}. Coming soon — we&apos;ll
-        write when Athens sessions open.
+        call {siteConfig.phone} or email {siteConfig.email}. Coming January 2027 —
+        we&apos;ll write when Athens sessions open.
       </p>
 
       {message ? (
