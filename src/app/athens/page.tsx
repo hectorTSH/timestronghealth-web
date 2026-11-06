@@ -7,12 +7,12 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Athens — Coming January 2027",
+  title: "Athens’ Trusted Names, Now Making House Calls.",
   description:
     "Coming January 2027. Time Strong Health™ is partnering with Athens Personal Fitness to provide concierge in-home fitness and wellness for older adults, with coverage in Athens, GA and nearby Oconee and Jackson counties.",
   alternates: { canonical: "/athens" },
   openGraph: {
-    title: "Two names. New area. Same standard.",
+    title: "Athens’ Trusted Names, Now Making House Calls.",
     description:
       "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — concierge in-home fitness and wellness for older adults in Athens, GA and nearby Oconee and Jackson counties.",
     url: "/athens",
@@ -55,16 +55,13 @@ export default function AthensPage() {
           }}
         />
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-x-12">
-          <div className="relative z-10">
+          <div className="relative z-10 @container">
             <p className="font-serif text-3xl italic text-brand sm:text-4xl">
               Coming January 2027.
             </p>
-            <h1 className="mt-3 max-w-xl text-4xl leading-[1.08] sm:mt-4 sm:text-5xl lg:text-6xl">
-              Two names.
-              <br />
-              New area.
-              <br />
-              Same standard.
+            <h1 className="mt-3 text-[clamp(1.35rem,8.4cqi,3.4rem)] leading-[1.08] sm:mt-4">
+              <span className="block whitespace-nowrap">Athens’ Trusted Names,</span>
+              <span className="block whitespace-nowrap">Now Making House Calls.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-neutral-300 sm:mt-6 sm:text-xl">
               Time Strong Health™ is partnering with Athens Personal Fitness to
