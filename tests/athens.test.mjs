@@ -59,7 +59,10 @@ test("short Athens page is a January 2027 partnership landing with three brief a
   assert.match(html, /id="interest"/);
   assert.match(html, /logos\/time-strong-health\.svg/);
   assert.match(html, /logos\/athens-personal-fitness\.svg/);
-  assert.match(html, /athens-founders\.png/);
+  assert.match(html, /athens-founders-832\.avif 832w/);
+  assert.match(html, /athens-founders-576\.webp 576w/);
+  assert.match(html, /athens-founders-320\.png 320w/);
+  assert.match(html, /sizes="\(max-width: 639px\) 288px, \(max-width: 1023px\) 352px, 416px"/);
   assert.doesNotMatch(html, /hero-kettlebell\.jpg/);
   assert.doesNotMatch(html, /hero-home\.jpg/);
   assert.match(html, /<form\b/);

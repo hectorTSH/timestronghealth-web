@@ -54,27 +54,24 @@ export default function AthensPage() {
             background: "radial-gradient(circle, #f7931a 0%, transparent 68%)",
           }}
         />
-        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-12 lg:gap-y-6">
-          <div className="relative z-10 lg:col-start-1 lg:row-start-1">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-x-12">
+          <div className="relative z-10">
             <p className="font-serif text-3xl italic text-brand sm:text-4xl">
               Coming January 2027.
             </p>
-            <h1 className="mt-4 max-w-xl text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 max-w-xl text-4xl leading-[1.08] sm:mt-4 sm:text-5xl lg:text-6xl">
               Two names.
               <br />
               New area.
               <br />
               Same standard.
             </h1>
-          </div>
-
-          <div className="relative z-10 max-sm:order-last lg:col-start-1 lg:row-start-2">
-            <p className="max-w-xl text-lg text-neutral-300 sm:text-xl">
+            <p className="mt-5 max-w-xl text-lg text-neutral-300 sm:mt-6 sm:text-xl">
               Time Strong Health™ is partnering with Athens Personal Fitness to
               provide concierge in-home fitness and wellness for older adults,
               with coverage in Athens, GA and nearby Oconee and Jackson counties.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
               <AthensListLink>Get on the Athens list</AthensListLink>
               <Button href={siteConfig.phoneHref} variant="ghost" className={onDark}>
                 Call {siteConfig.phone}
@@ -82,16 +79,30 @@ export default function AthensPage() {
             </div>
           </div>
 
-          <div className="relative z-10 flex justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:justify-end">
-            <Image
-              src="/images/athens-founders.png"
-              alt="Hector A. Mallar and Ryan Marsh shaking hands"
-              width={290}
-              height={478}
-              priority
-              unoptimized
-              className="h-auto w-[16.5rem] max-w-full object-contain sm:w-[22rem] lg:w-[26rem]"
-            />
+          <div className="relative z-10 flex justify-center lg:justify-end">
+            <picture>
+              <source
+                type="image/avif"
+                srcSet="/images/athens-founders-320.avif 320w, /images/athens-founders-576.avif 576w, /images/athens-founders-832.avif 832w"
+                sizes="(max-width: 639px) 288px, (max-width: 1023px) 352px, 416px"
+              />
+              <source
+                type="image/webp"
+                srcSet="/images/athens-founders-320.webp 320w, /images/athens-founders-576.webp 576w, /images/athens-founders-832.webp 832w"
+                sizes="(max-width: 639px) 288px, (max-width: 1023px) 352px, 416px"
+              />
+              <img
+                src="/images/athens-founders-832.png"
+                srcSet="/images/athens-founders-320.png 320w, /images/athens-founders-576.png 576w, /images/athens-founders-832.png 832w"
+                sizes="(max-width: 639px) 288px, (max-width: 1023px) 352px, 416px"
+                width={832}
+                height={1388}
+                alt="Hector A. Mallar and Ryan Marsh shaking hands"
+                fetchPriority="high"
+                decoding="async"
+                className="h-auto w-[18rem] max-w-full sm:w-[22rem] lg:w-[26rem]"
+              />
+            </picture>
           </div>
         </div>
       </Section>
