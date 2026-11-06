@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Coming January 2027. Time Strong Health™ is partnering with Athens Personal Fitness to provide concierge in-home fitness and wellness for older adults, with coverage in Athens, GA and nearby Oconee and Jackson counties.",
   alternates: { canonical: "/athens" },
   openGraph: {
-    title: "Two names. New area. Same standard.",
+    title: "Two names. New coverage. Same standard.",
     description:
       "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — concierge in-home fitness and wellness for older adults in Athens, GA and nearby Oconee and Jackson counties.",
     url: "/athens",
@@ -62,7 +62,7 @@ export default function AthensPage() {
             <h1 className="mt-4 max-w-xl text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">
               Two names.
               <br />
-              New area.
+              New coverage.
               <br />
               Same standard.
             </h1>
@@ -97,19 +97,27 @@ export default function AthensPage() {
           eyebrow="Who it's for"
           title="For the one who trains, and the one who refers"
         />
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)]">
           {audiences.map((item) => (
             <article
               key={item.id}
               id={item.id}
-              className="scroll-mt-28 rounded-2xl border border-border bg-background p-6 shadow-sm sm:p-8"
+              className="@container scroll-mt-28 rounded-2xl border border-border bg-background p-6 shadow-sm sm:p-8"
             >
               <p className="font-serif text-3xl italic text-brand">{item.number}</p>
               <p className="mt-4 text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
                 {item.eyebrow}
               </p>
               <h3 className="mt-2 text-2xl">{item.title}</h3>
-              <p className="mt-3 text-base text-muted">{item.text}</p>
+              <p
+                className={
+                  item.id === "for-clinicians"
+                    ? "mt-3 text-base text-muted lg:whitespace-nowrap lg:text-[clamp(0.8125rem,2.55cqi,1rem)]"
+                    : "mt-3 text-base text-muted"
+                }
+              >
+                {item.text}
+              </p>
               {"note" in item ? (
                 <p className="mt-3 text-base text-muted">{item.note}</p>
               ) : null}
