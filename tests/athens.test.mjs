@@ -39,11 +39,14 @@ test("short Athens page is a January 2027 partnership landing with three brief a
   const html = await response.text();
   const text = mainText(html);
 
-  assert.match(text, /Two names\. One home\./);
+  assert.match(text, /Two names\. New area\. Same standard\./);
   assert.match(text, /Coming January 2027/);
-  assert.match(text, /Athens, GA/);
+  assert.match(text, /Athens, GA and nearby Oconee and Jackson counties/);
+  assert.match(text, /concierge in-home fitness and wellness for older adults/);
+  assert.match(text, /Founded by Hector A\. Mallar, DPT, CSFS/);
   assert.ok(text.indexOf("Coming January 2027") < text.indexOf("Two names"));
   assert.ok(text.indexOf("Two names") < text.indexOf("Athens, GA"));
+  assert.doesNotMatch(text, /ATHENS, GA/);
   assert.match(text, /Hector A\. Mallar, DPT, CSFS/);
   assert.match(text, /fall risk reduction/);
   assert.match(text, /A doctor's referral with medical clearance, or a completed PAR-Q\+, is required/);

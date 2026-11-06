@@ -9,12 +9,12 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Athens — Coming January 2027",
   description:
-    "Coming January 2027. Time Strong Health™ is bringing one-on-one, in-home fitness and wellness to Athens, GA, in partnership with Athens Personal Fitness. Join the Athens list.",
+    "Coming January 2027. Time Strong Health™ is partnering with Athens Personal Fitness to provide concierge in-home fitness and wellness for older adults, with coverage in Athens, GA and nearby Oconee and Jackson counties.",
   alternates: { canonical: "/athens" },
   openGraph: {
-    title: "Two names. One home.",
+    title: "Two names. New area. Same standard.",
     description:
-      "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — in-home fitness and wellness in Athens, GA.",
+      "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — concierge in-home fitness and wellness for older adults in Athens, GA and nearby Oconee and Jackson counties.",
     url: "/athens",
   },
 };
@@ -35,7 +35,8 @@ const audiences = [
     number: "02",
     eyebrow: "Referring clinicians",
     title: "For referrals.",
-    text: "Private-pay, in-home fitness that can complement or follow skilled rehabilitation. Hector A. Mallar, DPT, CSFS.",
+    text: "Private-pay, in-home fitness that can complement or follow skilled rehabilitation.",
+    note: "Founded by Hector A. Mallar, DPT, CSFS",
   },
 ];
 
@@ -58,18 +59,17 @@ export default function AthensPage() {
             <p className="font-serif text-3xl italic text-brand sm:text-4xl">
               Coming January 2027.
             </p>
-            <h1 className="mt-4 max-w-xl text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-4 max-w-xl text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">
               Two names.
               <br />
-              One home.
+              New area.
+              <br />
+              Same standard.
             </h1>
-            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-white">
-              Athens, GA
-            </p>
             <p className="mt-6 max-w-xl text-xl text-neutral-300">
-              Time Strong Health™ is partnering with Athens Personal Fitness.
-              One-on-one, in-home fitness and wellness for older adults living
-              with Parkinson&apos;s Disease and other movement challenges.
+              Time Strong Health™ is partnering with Athens Personal Fitness to
+              provide concierge in-home fitness and wellness for older adults,
+              with coverage in Athens, GA and nearby Oconee and Jackson counties.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <AthensListLink>Get on the Athens list</AthensListLink>
@@ -110,6 +110,9 @@ export default function AthensPage() {
               </p>
               <h3 className="mt-2 text-2xl">{item.title}</h3>
               <p className="mt-3 text-base text-muted">{item.text}</p>
+              {"note" in item ? (
+                <p className="mt-3 text-base text-muted">{item.note}</p>
+              ) : null}
             </article>
           ))}
         </div>
@@ -142,7 +145,7 @@ export default function AthensPage() {
             width={4218}
             height={4038}
             unoptimized
-            className="h-44 w-auto brightness-0 sm:h-56 lg:h-64 dark:invert"
+            className="h-44 w-auto sm:h-56 lg:h-64"
           />
         </div>
       </section>
