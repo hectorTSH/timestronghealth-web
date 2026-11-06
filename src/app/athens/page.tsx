@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Coming January 2027. Time Strong Health™ is partnering with Athens Personal Fitness to provide concierge in-home fitness and wellness for older adults, with coverage in Athens, GA and nearby Oconee and Jackson counties.",
   alternates: { canonical: "/athens" },
   openGraph: {
-    title: "Two names. New coverage. Same standard.",
+    title: "Two names. New area. Same standard.",
     description:
       "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — concierge in-home fitness and wellness for older adults in Athens, GA and nearby Oconee and Jackson counties.",
     url: "/athens",
@@ -45,7 +45,7 @@ export default function AthensPage() {
     <>
       <Section
         tone="dark"
-        className="relative overflow-hidden border-b border-white/15 pb-16 pt-14 sm:pb-24 sm:pt-20"
+        className="relative overflow-hidden border-b border-white/15 pb-8 pt-10 sm:pb-24 sm:pt-20"
       >
         <div
           aria-hidden
@@ -54,19 +54,22 @@ export default function AthensPage() {
             background: "radial-gradient(circle, #f7931a 0%, transparent 68%)",
           }}
         />
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="relative z-10">
+        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-12 lg:gap-y-6">
+          <div className="relative z-10 lg:col-start-1 lg:row-start-1">
             <p className="font-serif text-3xl italic text-brand sm:text-4xl">
               Coming January 2027.
             </p>
             <h1 className="mt-4 max-w-xl text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">
               Two names.
               <br />
-              New coverage.
+              New area.
               <br />
               Same standard.
             </h1>
-            <p className="mt-6 max-w-xl text-xl text-neutral-300">
+          </div>
+
+          <div className="relative z-10 max-sm:order-last lg:col-start-1 lg:row-start-2">
+            <p className="max-w-xl text-lg text-neutral-300 sm:text-xl">
               Time Strong Health™ is partnering with Athens Personal Fitness to
               provide concierge in-home fitness and wellness for older adults,
               with coverage in Athens, GA and nearby Oconee and Jackson counties.
@@ -79,14 +82,15 @@ export default function AthensPage() {
             </div>
           </div>
 
-          <div className="relative z-10 aspect-[3/4] overflow-hidden rounded-2xl border border-white/15 bg-neutral-900 shadow-lg">
+          <div className="relative z-10 flex justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:justify-end">
             <Image
-              src="/images/hero-kettlebell.jpg"
-              alt="A fitness coach guiding an older adult through a kettlebell strength exercise"
-              fill
+              src="/images/athens-founders.png"
+              alt="Hector A. Mallar and Ryan Marsh shaking hands"
+              width={290}
+              height={478}
               priority
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="img-fade object-cover"
+              unoptimized
+              className="h-auto w-[16.5rem] max-w-full object-contain sm:w-[22rem] lg:w-[26rem]"
             />
           </div>
         </div>

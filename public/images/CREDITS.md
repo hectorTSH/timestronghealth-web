@@ -15,6 +15,7 @@ Stock photos below are free to use under the [Pexels License](https://www.pexels
 | `about-outdoors.jpg` | Pexels | Rohit George | [28933058](https://www.pexels.com/photo/senior-couple-walking-on-forest-path-28933058/) | Pexels License |
 | `about-coaching.jpg` | Pexels | Kampus Production | [6922127](https://www.pexels.com/photo/man-sitting-on-exercise-mat-while-doing-stretching-6922127/) | Pexels License |
 | `founder-headshot.png` | Time Strong Health | Hector Mallar (Nikon D850 / Lightroom) | Live Wix `General headshot.jpg` | All rights reserved |
+| `athens-founders.png` | Time Strong Health | TSH × APF print build | Full-body handshake, background removed | All rights reserved |
 
 **BBB seals** (official Accredited Business artwork from the live TSH Wix site / BBB files) live in [`public/bbb/`](../../bbb/):
 
