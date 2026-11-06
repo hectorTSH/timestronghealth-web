@@ -10,8 +10,10 @@ import {
 } from "@/lib/contact-validation";
 
 // Node runtime: delivery uses fetch + Buffer (base64url) and env-var secrets.
-// Recipients stay on the existing contact inbox: CONTACT_TO (default info@)
-// and CONTACT_BCC (default hector@). Nothing else is added.
+// To is always info@timestronghealth.com. Subject is exactly ATHENS INQUIRY.
+// BCC stays on the existing contact inbox (CONTACT_BCC, default hector@).
+// Delivery uses Resend when RESEND_API_KEY is set, otherwise the Gmail API
+// when GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, and GOOGLE_REFRESH_TOKEN are set.
 export const runtime = "nodejs";
 
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
@@ -24,7 +26,8 @@ const GMAIL_SEND_ENDPOINT = "https://gmail.googleapis.com/gmail/v1/users/me/mess
 
 const DEFAULT_RESEND_FROM = "Time Strong Health Website <website@timestronghealth.com>";
 const DEFAULT_GMAIL_FROM = "hector@timestronghealth.com";
-const DEFAULT_CONTACT_TO = "info@timestronghealth.com";
+const ATHENS_INQUIRY_TO = "info@timestronghealth.com";
+const ATHENS_INQUIRY_SUBJECT = "ATHENS INQUIRY";
 const DEFAULT_CONTACT_BCC = "hector@timestronghealth.com";
 
 const MSG_UNSUPPORTED_CONTENT_TYPE = "Unsupported content type; expected application/json.";
@@ -107,10 +110,7 @@ function resolveDeliveryProvider(): DeliveryProvider | null {
 }
 
 function getRecipients(): string[] {
-  return (process.env.CONTACT_TO || DEFAULT_CONTACT_TO)
-    .split(",")
-    .map((entry) => entry.trim())
-    .filter(Boolean);
+  return [ATHENS_INQUIRY_TO];
 }
 
 function getBccRecipients(): string {
@@ -119,7 +119,7 @@ function getBccRecipients(): string {
 
 function buildAthensInterestEmailText(submission: AthensInterestSubmission): string {
   return (
-    "New Athens list request from the Time Strong Health website.\n\n" +
+    "New Athens inquiry from the Time Strong Health website.\n\n" +
     `Name: ${submission.name}\n` +
     `Email: ${submission.email}\n` +
     `Phone: ${submission.phone || "(not provided)"}\n` +
@@ -143,7 +143,7 @@ async function sendViaResend(submission: AthensInterestSubmission): Promise<void
       to: getRecipients(),
       ...(bcc ? { bcc: [bcc] } : {}),
       reply_to: submission.email,
-      subject: `Athens list request from ${stripHeaderBreaks(submission.name).slice(0, 120)}`,
+      subject: ATHENS_INQUIRY_SUBJECT,
       text: buildAthensInterestEmailText(submission),
     }),
   });
@@ -210,7 +210,7 @@ async function sendViaGmail(submission: AthensInterestSubmission): Promise<void>
     bcc: getBccRecipients(),
     from: process.env.CONTACT_FROM_EMAIL || DEFAULT_GMAIL_FROM,
     replyTo: submission.email,
-    subject: `Athens list request from ${stripHeaderBreaks(submission.name).slice(0, 120)}`,
+    subject: ATHENS_INQUIRY_SUBJECT,
     body: buildAthensInterestEmailText(submission),
   });
 

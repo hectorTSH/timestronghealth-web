@@ -20,7 +20,7 @@ export const ATHENS_ROLES = [
   {
     value: "other",
     label: "Someone else",
-    hint: "I want to know when Athens opens.",
+    hint: "I'm asking for someone else.",
   },
 ] as const;
 

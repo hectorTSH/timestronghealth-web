@@ -9,12 +9,12 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Athens — Coming January 2027",
   description:
-    "Coming January 2027. Time Strong Health™ is bringing one-on-one, in-home fitness and wellness to Athens, Georgia, in partnership with Athens Personal Fitness. Join the Athens list.",
+    "Coming January 2027. Time Strong Health™ is bringing one-on-one, in-home fitness and wellness to Athens, GA, in partnership with Athens Personal Fitness. Join the Athens list.",
   alternates: { canonical: "/athens" },
   openGraph: {
-    title: "Strong is coming to Athens",
+    title: "Strong is moving in",
     description:
-      "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — in-home fitness and wellness in Athens, Georgia.",
+      "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — in-home fitness and wellness in Athens, GA.",
     url: "/athens",
   },
 };
@@ -31,15 +31,8 @@ const audiences = [
     text: "Strength, balance, and fall risk reduction, in the rooms you already use.",
   },
   {
-    id: "for-caregivers",
-    number: "02",
-    eyebrow: "Caregivers",
-    title: "Come along.",
-    text: "Caregivers are encouraged to join. Practical coaching for you, too — at home or online.",
-  },
-  {
     id: "for-clinicians",
-    number: "03",
+    number: "02",
     eyebrow: "Referring clinicians",
     title: "For referrals.",
     text: "Private-pay, in-home fitness that can complement or follow skilled rehabilitation. Hector A. Mallar, DPT, CSFS.",
@@ -62,28 +55,21 @@ export default function AthensPage() {
         />
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative z-10">
-            <p className="mb-5 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-brand">
-              <span aria-hidden className="h-px w-10 bg-brand" />
-              Athens, Georgia
-            </p>
             <h1 className="max-w-xl text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
               Strong is
               <br />
-              coming to
-              <br />
-              <span className="italic text-brand">Athens</span>.
+              moving in.
             </h1>
             <p className="mt-6 font-serif text-3xl italic text-brand sm:text-4xl">
               Coming January 2027.
+            </p>
+            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-white">
+              Athens, GA
             </p>
             <p className="mt-6 max-w-xl text-xl text-neutral-300">
               Time Strong Health™ is partnering with Athens Personal Fitness.
               One-on-one, in-home fitness and wellness for older adults living
               with Parkinson&apos;s Disease and other movement challenges.
-            </p>
-            <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-neutral-300">
-              Metro Atlanta <span aria-hidden className="text-brand">→</span>{" "}
-              <span className="text-white">ATH · Athens, Georgia</span>
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <AthensListLink>Get on the Athens list</AthensListLink>
@@ -95,8 +81,8 @@ export default function AthensPage() {
 
           <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl border border-white/15 bg-neutral-900 shadow-lg lg:aspect-[5/4]">
             <Image
-              src="/images/hero-home.jpg"
-              alt="Fitness specialist guiding an older adult through a calm balance exercise in a bright home"
+              src="/images/hero-strength.jpg"
+              alt="An older adult lifting light dumbbells during a warm in-home strength session"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
@@ -109,9 +95,9 @@ export default function AthensPage() {
       <Section id="who">
         <SectionHeading
           eyebrow="Who it's for"
-          title="Three reasons to get on the list"
+          title="For you, and the clinician who refers you"
         />
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {audiences.map((item) => (
             <article
               key={item.id}
@@ -128,32 +114,38 @@ export default function AthensPage() {
           ))}
         </div>
         <p className="mt-10 max-w-3xl text-lg text-muted">
-          The first assessment is 2 hours. Comfortable clothes and supportive
-          shoes are encouraged. A doctor&apos;s referral with medical clearance, or
-          a completed PAR-Q+, is required.
+          A doctor&apos;s referral with medical clearance, or a completed PAR-Q+, is
+          required.
         </p>
       </Section>
 
-      <Section tone="brand-soft" id="partnership">
-        <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
-          The partnership
-        </p>
-        <h2 className="mt-3 max-w-3xl text-3xl sm:text-4xl">
-          Time Strong Health™ <span className="text-brand">×</span> Athens Personal Fitness
-        </h2>
-        <div className="mt-8 space-y-2 text-xl">
-          <p>
-            <strong className="font-semibold">Ryan Marsh</strong>
-            {" — "}
-            Owner, Athens Personal Fitness
-          </p>
-          <p>
-            <strong className="font-semibold">Toni Haynes</strong>
-            {" — "}
-            Lead Trainer, Athens
-          </p>
+      <section
+        id="partnership"
+        aria-label="Time Strong Health and Athens Personal Fitness"
+        className="bg-brand-soft py-16 sm:py-20"
+      >
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-6 px-4 sm:flex-row sm:gap-10 sm:px-6 lg:px-8">
+          <Image
+            src="/logos/time-strong-health.svg"
+            alt="Time Strong Health"
+            width={5910}
+            height={4824}
+            unoptimized
+            className="h-28 w-auto sm:h-36"
+          />
+          <span aria-hidden className="font-serif text-6xl leading-none text-brand sm:text-7xl">
+            ×
+          </span>
+          <Image
+            src="/logos/athens-personal-fitness.svg"
+            alt="Athens Personal Fitness"
+            width={4218}
+            height={4038}
+            unoptimized
+            className="h-28 w-auto sm:h-36"
+          />
         </div>
-      </Section>
+      </section>
 
       <Section tone="muted" id="interest" className="scroll-mt-28">
         <SectionHeading

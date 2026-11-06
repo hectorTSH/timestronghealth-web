@@ -39,34 +39,29 @@ test("short Athens page is a January 2027 partnership landing with three brief a
   const html = await response.text();
   const text = mainText(html);
 
-  assert.match(text, /Strong is coming to Athens/);
+  assert.match(text, /Strong is moving in/);
   assert.match(text, /Coming January 2027/);
+  assert.match(text, /Athens, GA/);
   assert.match(text, /Hector A\. Mallar, DPT, CSFS/);
-  assert.match(text, /ATH/);
   assert.match(text, /fall risk reduction/);
-  assert.match(text, /Ryan Marsh — Owner, Athens Personal Fitness/);
-  assert.match(text, /Toni Haynes — Lead Trainer, Athens/);
-  assert.match(text, /The first assessment is 2 hours/);
-  assert.match(text, /Caregivers are encouraged to join/);
-  assert.match(text, /Comfortable clothes and supportive shoes are encouraged/);
   assert.match(text, /A doctor's referral with medical clearance, or a completed PAR-Q\+, is required/);
   assert.match(text, /complement or follow skilled rehabilitation/);
-  assert.match(text, /Time Strong Health™/);
-  assert.match(text, /Older adults/);
-  assert.match(text, /Caregivers/);
-  assert.match(text, /Referring clinicians/);
+  assert.match(text, /For you, and the clinician who refers you/);
+  assert.match(text, /I'm asking for someone else/);
   assert.match(html, /id="for-you"/);
-  assert.match(html, /id="for-caregivers"/);
   assert.match(html, /id="for-clinicians"/);
+  assert.match(html, /id="partnership"/);
   assert.match(html, /id="interest"/);
+  assert.match(html, /logos\/time-strong-health\.svg/);
+  assert.match(html, /logos\/athens-personal-fitness\.svg/);
+  assert.match(html, /hero-strength\.jpg/);
   assert.match(html, /<form\b/);
-  assert.match(html, /value="older-adult"/);
-  assert.match(html, /value="caregiver"/);
-  assert.match(html, /value="clinician"/);
   assert.match(html, /Get on the Athens list/);
   assert.match(html, /href="\/athens"/);
+  assert.doesNotMatch(html, /id="for-caregivers"/);
   assert.doesNotMatch(html, /href="\/athens-full"/);
-
+  assert.doesNotMatch(text, /The first assessment is 2 hours/);
+  assert.doesNotMatch(text, /\bATH\b/);
   assert.doesNotMatch(text, /Coming soon/i);
   assert.doesNotMatch(text, /Early 2027/i);
   assert.doesNotMatch(text, /AHN/);
@@ -90,6 +85,7 @@ test("the longer Athens page is archived off the public nav", async () => {
 
   const home = await fetch(new URL("/", baseUrl));
   const homeHtml = await home.text();
+  assert.match(homeHtml, /hero-strength\.jpg/);
   assert.match(homeHtml, /href="\/athens"/);
   assert.match(homeHtml, />Athens</);
   assert.doesNotMatch(homeHtml, /href="\/athens-full"/);
@@ -111,6 +107,9 @@ test("Athens interest mail stays on the existing TSH inbox addresses", () => {
       "website@timestronghealth.com",
     ],
   );
+  assert.match(source, /ATHENS INQUIRY/);
+  assert.match(source, /return \[ATHENS_INQUIRY_TO\]/);
+  assert.doesNotMatch(source, /Athens list request/);
   assert.match(source, /to: getRecipients\(\)/);
   assert.match(source, /reply_to: submission\.email/);
   const recipientLines = source
