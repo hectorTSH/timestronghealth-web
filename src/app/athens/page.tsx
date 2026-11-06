@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Coming January 2027. Time Strong Health™ is bringing one-on-one, in-home fitness and wellness to Athens, GA, in partnership with Athens Personal Fitness. Join the Athens list.",
   alternates: { canonical: "/athens" },
   openGraph: {
-    title: "Strong is moving in",
+    title: "Two names. One home.",
     description:
       "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — in-home fitness and wellness in Athens, GA.",
     url: "/athens",
@@ -55,14 +55,14 @@ export default function AthensPage() {
         />
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative z-10">
-            <h1 className="max-w-xl text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
-              Strong is
-              <br />
-              moving in.
-            </h1>
-            <p className="mt-6 font-serif text-3xl italic text-brand sm:text-4xl">
+            <p className="font-serif text-3xl italic text-brand sm:text-4xl">
               Coming January 2027.
             </p>
+            <h1 className="mt-4 max-w-xl text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
+              Two names.
+              <br />
+              One home.
+            </h1>
             <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-white">
               Athens, GA
             </p>
@@ -79,10 +79,10 @@ export default function AthensPage() {
             </div>
           </div>
 
-          <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl border border-white/15 bg-neutral-900 shadow-lg lg:aspect-[5/4]">
+          <div className="relative z-10 aspect-[3/4] overflow-hidden rounded-2xl border border-white/15 bg-neutral-900 shadow-lg">
             <Image
-              src="/images/hero-strength.jpg"
-              alt="An older adult lifting light dumbbells during a warm in-home strength session"
+              src="/images/hero-kettlebell.jpg"
+              alt="A fitness coach guiding an older adult through a kettlebell strength exercise"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
@@ -95,7 +95,7 @@ export default function AthensPage() {
       <Section id="who">
         <SectionHeading
           eyebrow="Who it's for"
-          title="For you, and the clinician who refers you"
+          title="For the one who trains, and the one who refers"
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {audiences.map((item) => (
@@ -124,16 +124,16 @@ export default function AthensPage() {
         aria-label="Time Strong Health and Athens Personal Fitness"
         className="bg-brand-soft py-16 sm:py-20"
       >
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-6 px-4 sm:flex-row sm:gap-10 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-8 px-4 sm:flex-row sm:gap-12 sm:px-6 lg:gap-16 lg:px-8">
           <Image
             src="/logos/time-strong-health.svg"
             alt="Time Strong Health"
             width={5910}
             height={4824}
             unoptimized
-            className="h-28 w-auto sm:h-36"
+            className="h-44 w-auto sm:h-56 lg:h-64 dark:brightness-0 dark:invert"
           />
-          <span aria-hidden className="font-serif text-6xl leading-none text-brand sm:text-7xl">
+          <span aria-hidden className="font-serif text-7xl leading-none text-brand sm:text-8xl">
             ×
           </span>
           <Image
@@ -142,7 +142,7 @@ export default function AthensPage() {
             width={4218}
             height={4038}
             unoptimized
-            className="h-28 w-auto sm:h-36"
+            className="h-44 w-auto brightness-0 sm:h-56 lg:h-64 dark:invert"
           />
         </div>
       </section>

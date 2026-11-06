@@ -90,8 +90,8 @@ export default function HomePage() {
 
           <div className="animate-fade-up-delay-2 relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md lg:aspect-[5/4]">
             <Image
-              src="/images/hero-strength.jpg"
-              alt="An older adult lifting light dumbbells during a warm in-home strength session"
+              src="/images/hero-home.jpg"
+              alt="Fitness specialist guiding an older adult through a calm strength exercise in a bright home"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"

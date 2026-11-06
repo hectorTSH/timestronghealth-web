@@ -39,14 +39,16 @@ test("short Athens page is a January 2027 partnership landing with three brief a
   const html = await response.text();
   const text = mainText(html);
 
-  assert.match(text, /Strong is moving in/);
+  assert.match(text, /Two names\. One home\./);
   assert.match(text, /Coming January 2027/);
   assert.match(text, /Athens, GA/);
+  assert.ok(text.indexOf("Coming January 2027") < text.indexOf("Two names"));
+  assert.ok(text.indexOf("Two names") < text.indexOf("Athens, GA"));
   assert.match(text, /Hector A\. Mallar, DPT, CSFS/);
   assert.match(text, /fall risk reduction/);
   assert.match(text, /A doctor's referral with medical clearance, or a completed PAR-Q\+, is required/);
   assert.match(text, /complement or follow skilled rehabilitation/);
-  assert.match(text, /For you, and the clinician who refers you/);
+  assert.match(text, /For the one who trains, and the one who refers/);
   assert.match(text, /I'm asking for someone else/);
   assert.match(html, /id="for-you"/);
   assert.match(html, /id="for-clinicians"/);
@@ -54,7 +56,7 @@ test("short Athens page is a January 2027 partnership landing with three brief a
   assert.match(html, /id="interest"/);
   assert.match(html, /logos\/time-strong-health\.svg/);
   assert.match(html, /logos\/athens-personal-fitness\.svg/);
-  assert.match(html, /hero-strength\.jpg/);
+  assert.match(html, /hero-kettlebell\.jpg/);
   assert.match(html, /<form\b/);
   assert.match(html, /Get on the Athens list/);
   assert.match(html, /href="\/athens"/);
@@ -85,7 +87,7 @@ test("the longer Athens page is archived off the public nav", async () => {
 
   const home = await fetch(new URL("/", baseUrl));
   const homeHtml = await home.text();
-  assert.match(homeHtml, /hero-strength\.jpg/);
+  assert.match(homeHtml, /hero-home\.jpg/);
   assert.match(homeHtml, /href="\/athens"/);
   assert.match(homeHtml, />Athens</);
   assert.doesNotMatch(homeHtml, /href="\/athens-full"/);
