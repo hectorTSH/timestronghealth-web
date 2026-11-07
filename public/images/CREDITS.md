@@ -5,6 +5,8 @@ Stock photos below are free to use under the [Pexels License](https://www.pexels
 | Filename | Source | Photographer / studio | Page / ID | License |
 |----------|--------|------------------------|-----------|---------|
 | `hero-home.jpg` | Pexels | Kampus Production | [7551608](https://www.pexels.com/photo/a-woman-teaching-an-elderly-man-doing-an-exercise-7551608/) | Pexels License |
+| `hero-kettlebell.jpg` | Pexels | Kampus Production | [6922174](https://www.pexels.com/photo/6922174/) | Pexels License |
+| `hero-strength.jpg` | Pexels | Ron Lach | [7927939](https://www.pexels.com/photo/an-elderly-woman-holding-dumbbells-7927939/) | Pexels License |
 | `session-guided.jpg` | Pexels | Kampus Production | [7551627](https://www.pexels.com/photo/a-man-in-blue-sweater-wearing-eyeglasses-doing-exercise-7551627/) | Pexels License |
 | `fitness-home.jpg` | Pexels | Kampus Production | [7530370](https://www.pexels.com/photo/an-elderly-man-doing-exercise-7530370/) | Pexels License |
 | `mobility-stretch.jpg` | Pexels | SHVETS production | [8899534](https://www.pexels.com/photo/a-man-in-blue-t-shirt-stretching-his-legs-8899534/) | Pexels License |
@@ -13,6 +15,7 @@ Stock photos below are free to use under the [Pexels License](https://www.pexels
 | `about-outdoors.jpg` | Pexels | Rohit George | [28933058](https://www.pexels.com/photo/senior-couple-walking-on-forest-path-28933058/) | Pexels License |
 | `about-coaching.jpg` | Pexels | Kampus Production | [6922127](https://www.pexels.com/photo/man-sitting-on-exercise-mat-while-doing-stretching-6922127/) | Pexels License |
 | `founder-headshot.png` | Time Strong Health | Hector Mallar (Nikon D850 / Lightroom) | Live Wix `General headshot.jpg` | All rights reserved |
+| `athens-founders-320/576/832.avif .webp .png` | Time Strong Health | Supplied transparent handshake | Trimmed 1x/2x hero sources | All rights reserved |
 
 **BBB seals** (official Accredited Business artwork from the live TSH Wix site / BBB files) live in [`public/bbb/`](../../bbb/):
 

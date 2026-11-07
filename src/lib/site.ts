@@ -22,6 +22,7 @@ export const siteConfig = {
   nav: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/athens", label: "Athens" },
     { href: "/resources", label: "Resources" },
     { href: "/contact", label: "Contact" },
   ],
