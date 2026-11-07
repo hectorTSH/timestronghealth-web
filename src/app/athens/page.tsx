@@ -35,8 +35,7 @@ const audiences = [
     number: "02",
     eyebrow: "Referring clinicians",
     title: "For referrals.",
-    text: "Private-pay, in-home fitness that can complement or follow skilled rehabilitation.",
-    note: "Founded by Hector A. Mallar, DPT, CSFS",
+    text: "Private-pay, in-home fitness that can complement or follow skilled rehabilitation. Founded by Hector A. Mallar, DPT, CSFS",
   },
 ];
 
@@ -109,30 +108,19 @@ export default function AthensPage() {
           eyebrow="Who it's for"
           title="For the one who trains, and the one who refers"
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)]">
+        <div className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2">
           {audiences.map((item) => (
             <article
               key={item.id}
               id={item.id}
-              className="@container scroll-mt-28 rounded-2xl border border-border bg-background p-6 shadow-sm sm:p-8"
+              className="flex h-full scroll-mt-28 flex-col rounded-2xl border border-border bg-background p-6 shadow-sm sm:p-8"
             >
               <p className="font-serif text-3xl italic text-brand">{item.number}</p>
               <p className="mt-4 text-sm font-semibold uppercase tracking-[0.14em] text-brand-dark">
                 {item.eyebrow}
               </p>
               <h3 className="mt-2 text-2xl">{item.title}</h3>
-              <p
-                className={
-                  item.id === "for-clinicians"
-                    ? "mt-3 text-base text-muted lg:whitespace-nowrap lg:text-[clamp(0.8125rem,2.55cqi,1rem)]"
-                    : "mt-3 text-base text-muted"
-                }
-              >
-                {item.text}
-              </p>
-              {"note" in item ? (
-                <p className="mt-3 text-base text-muted">{item.note}</p>
-              ) : null}
+              <p className="mt-3 text-base text-muted">{item.text}</p>
             </article>
           ))}
         </div>
