@@ -142,7 +142,15 @@ export default function AthensPage() {
             width={5910}
             height={4824}
             unoptimized
-            className="h-44 w-auto sm:h-56 lg:h-64 dark:brightness-0 dark:invert"
+            className="h-44 w-auto sm:h-56 lg:h-64 dark:hidden"
+          />
+          <Image
+            src="/logos/time-strong-health-dark.svg"
+            alt="Time Strong Health"
+            width={5910}
+            height={4824}
+            unoptimized
+            className="hidden h-44 w-auto sm:h-56 lg:h-64 dark:block"
           />
           <span aria-hidden className="font-serif text-7xl leading-none text-brand sm:text-8xl">
             ×
