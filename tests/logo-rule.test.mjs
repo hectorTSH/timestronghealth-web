@@ -29,22 +29,22 @@ test("Athens TSH lockups keep the canonical orange rule", () => {
   assert.equal(dark.replace('fill="#FFFFFF" ', ""), light);
 });
 
-test("header slogan matches the pre-PR8 classes except its width", () => {
+test("header slogan fills the space between the logo and the seal", () => {
   const header = fs.readFileSync(new URL("../src/components/Header.tsx", import.meta.url), "utf8");
   const site = fs.readFileSync(new URL("../src/lib/site.ts", import.meta.url), "utf8");
+  const theme = fs.readFileSync(new URL("../src/components/ThemeToggle.tsx", import.meta.url), "utf8");
   assert.match(
     site,
     /Promoting the kind of Health that keeps you Strong until the end of Time\./,
   );
   const current = header.match(/<p className="([^"]+)">\s*\{siteConfig\.tagline\}/)?.[1];
-  const before =
-    "hidden max-w-[16rem] text-[0.7rem] leading-snug text-muted sm:block md:max-w-[13rem] lg:max-w-[18rem] lg:text-xs";
-  const width = /^(min-w-|max-w-|sm:max-w-|md:max-w-|lg:max-w-|xl:max-w-|text-wrap|text-balance|text-pretty)/;
-  const rest = (cls) => cls.split(/\s+/).filter((token) => !width.test(token)).sort();
-  assert.deepEqual(rest(current), rest(before));
-  assert.match(current, /lg:max-w-\[8\.25rem\]/);
-  assert.match(current, /xl:max-w-\[18rem\]/);
-  assert.doesNotMatch(current, /order-last|w-full/);
+  assert.equal(
+    current,
+    "hidden min-w-0 flex-[0_1_auto] text-[0.7rem] leading-snug text-muted sm:block lg:text-xs",
+  );
+  assert.match(header, /xl:max-w-screen-2xl/);
+  assert.match(header, /ml-auto flex shrink-0/);
+  assert.match(theme, /h-11 w-11 shrink-0/);
   assert.doesNotMatch(header, /overflow-x-hidden|overflow-hidden/);
   assert.match(header, /aria-label="Main"/);
   assert.match(header, /aria-label=\{open \? "Close menu" : "Open menu"\}/);

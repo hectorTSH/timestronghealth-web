@@ -15,7 +15,9 @@ export type HeaderVariant = "default" | "home";
 type HeaderProps = {
   /**
    * `home` hides the tagline and places the BBB seal beside the TSH logo.
-   * Other pages keep the default header (tagline next to the logo, BBB on the right).
+   * Other pages put the tagline between the logo and the seal. The tagline
+   * stays as wide as its text and only shrinks to wrap, and the seal follows
+   * the end of that text.
    * When omitted, Home (`/`) resolves to `home` so the root layout can stay shared.
    */
   variant?: HeaderVariant;
@@ -30,28 +32,35 @@ export function Header({ variant }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex min-w-0 items-center gap-3">
-          <Link
-            href="/"
-            className="shrink-0"
-            aria-label="Time Strong Health home"
-          >
-            <SiteLogo priority />
-          </Link>
-          {isHome ? (
-            <BbbSeal />
-          ) : (
-            <p className="hidden min-w-0 max-w-[16rem] text-[0.7rem] leading-snug text-muted sm:block md:max-w-[13rem] lg:max-w-[8.25rem] lg:text-xs xl:max-w-[18rem]">
-              {siteConfig.tagline}
-            </p>
+      <div className="mx-auto flex w-full min-w-0 max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 lg:px-8 xl:max-w-screen-2xl">
+        <Link
+          href="/"
+          className="shrink-0"
+          aria-label="Time Strong Health home"
+        >
+          <SiteLogo priority />
+        </Link>
+        {isHome ? (
+          <BbbSeal frameClassName="h-10 w-[7rem] sm:h-11 sm:w-[7.75rem]" />
+        ) : (
+          <p className="hidden min-w-0 flex-[0_1_auto] text-[0.7rem] leading-snug text-muted sm:block lg:text-xs">
+            {siteConfig.tagline}
+          </p>
+        )}
+        {isHome ? null : (
+          <div className="hidden shrink-0 sm:block">
+            <BbbSeal frameClassName="h-10 w-[7rem] sm:h-11 sm:w-[7.75rem]" />
+          </div>
+        )}
+
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
+          {isHome ? null : (
+            <div className="sm:hidden">
+              <BbbSeal frameClassName="h-10 w-[7rem] sm:h-11 sm:w-[7.75rem]" />
+            </div>
           )}
-        </div>
 
-        <div className="flex items-center gap-2 sm:gap-3">
-          {isHome ? null : <BbbSeal />}
-
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
+          <nav className="hidden shrink-0 items-center gap-1 lg:flex" aria-label="Main">
             {siteConfig.nav.map((item) => {
               const active =
                 item.href === "/"
@@ -62,7 +71,7 @@ export function Header({ variant }: HeaderProps) {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "rounded-full px-4 py-2 text-base font-medium transition lg:px-3 xl:px-4",
+                    "rounded-full px-4 py-2 text-base font-medium transition lg:px-2.5 xl:px-4",
                     active
                       ? "bg-brand-soft text-foreground"
                       : "text-muted hover:text-foreground",
@@ -72,7 +81,7 @@ export function Header({ variant }: HeaderProps) {
                 </Link>
               );
             })}
-            <Button href={siteConfig.phoneHref} className="ml-2 whitespace-nowrap">
+            <Button href={siteConfig.phoneHref} className="ml-2 shrink-0 whitespace-nowrap">
               Call {siteConfig.phone}
             </Button>
           </nav>
@@ -81,7 +90,7 @@ export function Header({ variant }: HeaderProps) {
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border lg:hidden"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
