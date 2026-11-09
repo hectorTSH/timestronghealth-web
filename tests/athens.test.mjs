@@ -98,7 +98,7 @@ test("the longer Athens page is archived off the public nav", async () => {
 
   const home = await fetch(new URL("/", baseUrl));
   const homeHtml = await home.text();
-  assert.match(homeHtml, /hero-home\.jpg/);
+  assert.match(homeHtml, /hero-coaching\.jpg/);
   assert.match(homeHtml, /href="\/athens"/);
   assert.match(homeHtml, />Athens</);
   assert.doesNotMatch(homeHtml, /href="\/athens-full"/);

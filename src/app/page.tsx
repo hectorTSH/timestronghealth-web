@@ -57,6 +57,28 @@ const forCaregivers = [
   "Education and confidence-building so you feel prepared, not overwhelmed",
 ];
 
+const focusPoints = [
+  "Moving with confidence",
+  "Staying strong",
+  "Supporting fall-risk reduction",
+  "Comfort of your own home",
+] as const;
+
+function FocusCard({ className }: { className: string }) {
+  return (
+    <div className={className}>
+      <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark">
+        What we focus on
+      </p>
+      <ul className="mt-2 grid gap-1 text-base text-foreground sm:grid-cols-2">
+        {focusPoints.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -88,27 +110,20 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="animate-fade-up-delay-2 relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md lg:aspect-[5/4]">
-            <Image
-              src="/images/hero-home.jpg"
-              alt="Fitness specialist guiding an older adult through a calm strength exercise in a bright home"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="img-fade object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-border bg-background/95 p-4 shadow-sm backdrop-blur-sm">
-              <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark">
-                What we focus on
-              </p>
-              <ul className="mt-2 grid gap-1 text-base text-foreground sm:grid-cols-2">
-                <li>Moving with confidence</li>
-                <li>Staying strong</li>
-                <li>Supporting fall-risk reduction</li>
-                <li>Comfort of your own home</li>
-              </ul>
+          <div className="animate-fade-up-delay-2">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md lg:aspect-[5/4]">
+              <Image
+                src="/images/hero-coaching.jpg"
+                alt="A fitness coach guiding an older adult through a standing dumbbell exercise"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="img-fade object-cover object-[92%_center]"
+              />
+              <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-black/35 via-transparent to-transparent lg:block" />
+              <FocusCard className="absolute bottom-4 left-4 right-4 hidden rounded-xl border border-border bg-background/95 p-4 shadow-sm backdrop-blur-sm lg:block" />
             </div>
+            <FocusCard className="mt-4 rounded-xl border border-border bg-background p-4 shadow-sm lg:hidden" />
           </div>
         </div>
       </section>
