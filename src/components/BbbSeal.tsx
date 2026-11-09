@@ -4,13 +4,15 @@ import { cn } from "@/lib/utils";
 
 type BbbSealProps = {
   className?: string;
+  /** Fixed outer box so the light and dark seals occupy the same space. */
+  frameClassName?: string;
   /** Always-dark surfaces (current footer) use the white-on-black horizontal seal. */
   surface?: "auto" | "dark" | "light";
 };
 
-export function BbbSeal({ className, surface = "auto" }: BbbSealProps) {
+export function BbbSeal({ className, frameClassName, surface = "auto" }: BbbSealProps) {
   const imgClass = cn(
-    "h-10 w-auto sm:h-11",
+    frameClassName ? "h-full w-full object-contain" : "h-10 w-auto sm:h-11",
     className,
   );
 
@@ -45,7 +47,10 @@ export function BbbSeal({ className, surface = "auto" }: BbbSealProps) {
       href={siteConfig.bbbUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex shrink-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      className={cn(
+        "inline-flex shrink-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        frameClassName,
+      )}
       aria-label={siteConfig.bbbLabel}
     >
       {surface === "dark" ? darkSeal : null}

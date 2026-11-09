@@ -15,8 +15,9 @@ export type HeaderVariant = "default" | "home";
 type HeaderProps = {
   /**
    * `home` hides the tagline and places the BBB seal beside the TSH logo.
-   * Other pages put the tagline between the logo and the seal. It uses the
-   * space between them and wraps as that space gets smaller.
+   * Other pages put the tagline between the logo and the seal. The tagline
+   * stays as wide as its text and only shrinks to wrap, and the seal follows
+   * the end of that text.
    * When omitted, Home (`/`) resolves to `home` so the root layout can stay shared.
    */
   variant?: HeaderVariant;
@@ -31,7 +32,7 @@ export function Header({ variant }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex w-full min-w-0 max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full min-w-0 max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 lg:px-8 xl:max-w-screen-2xl">
         <Link
           href="/"
           className="shrink-0"
@@ -40,27 +41,22 @@ export function Header({ variant }: HeaderProps) {
           <SiteLogo priority />
         </Link>
         {isHome ? (
-          <BbbSeal />
+          <BbbSeal frameClassName="h-10 w-[7rem] sm:h-11 sm:w-[7.75rem]" />
         ) : (
-          <p className="hidden min-w-0 flex-1 text-[0.7rem] leading-snug text-muted sm:block lg:text-xs">
+          <p className="hidden min-w-0 flex-[0_1_auto] text-[0.7rem] leading-snug text-muted sm:block lg:text-xs">
             {siteConfig.tagline}
           </p>
         )}
         {isHome ? null : (
           <div className="hidden shrink-0 sm:block">
-            <BbbSeal />
+            <BbbSeal frameClassName="h-10 w-[7rem] sm:h-11 sm:w-[7.75rem]" />
           </div>
         )}
 
-        <div
-          className={cn(
-            "flex shrink-0 items-center gap-2 sm:gap-3",
-            isHome ? "ml-auto" : "max-sm:ml-auto",
-          )}
-        >
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
           {isHome ? null : (
             <div className="sm:hidden">
-              <BbbSeal />
+              <BbbSeal frameClassName="h-10 w-[7rem] sm:h-11 sm:w-[7.75rem]" />
             </div>
           )}
 

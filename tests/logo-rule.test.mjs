@@ -40,8 +40,10 @@ test("header slogan fills the space between the logo and the seal", () => {
   const current = header.match(/<p className="([^"]+)">\s*\{siteConfig\.tagline\}/)?.[1];
   assert.equal(
     current,
-    "hidden min-w-0 flex-1 text-[0.7rem] leading-snug text-muted sm:block lg:text-xs",
+    "hidden min-w-0 flex-[0_1_auto] text-[0.7rem] leading-snug text-muted sm:block lg:text-xs",
   );
+  assert.match(header, /xl:max-w-screen-2xl/);
+  assert.match(header, /ml-auto flex shrink-0/);
   assert.match(theme, /h-11 w-11 shrink-0/);
   assert.doesNotMatch(header, /overflow-x-hidden|overflow-hidden/);
   assert.match(header, /aria-label="Main"/);
