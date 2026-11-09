@@ -30,23 +30,25 @@ export function Header({ variant }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-wrap items-center gap-x-2 gap-y-2 px-3 py-3 sm:gap-x-3 sm:px-6 lg:px-8">
-        <Link
-          href="/"
-          className="shrink-0"
-          aria-label="Time Strong Health home"
-        >
-          <SiteLogo priority />
-        </Link>
-        {isHome ? (
-          <BbbSeal />
-        ) : (
-          <p className="hidden w-[11rem] shrink-0 text-[0.7rem] leading-snug text-muted sm:block md:w-[13rem] lg:order-last lg:w-full lg:text-xs">
-            {siteConfig.tagline}
-          </p>
-        )}
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 items-center gap-3">
+          <Link
+            href="/"
+            className="shrink-0"
+            aria-label="Time Strong Health home"
+          >
+            <SiteLogo priority />
+          </Link>
+          {isHome ? (
+            <BbbSeal />
+          ) : (
+            <p className="hidden min-w-0 max-w-[16rem] text-[0.7rem] leading-snug text-muted sm:block md:max-w-[13rem] lg:max-w-[8.25rem] lg:text-xs xl:max-w-[18rem]">
+              {siteConfig.tagline}
+            </p>
+          )}
+        </div>
 
-        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           {isHome ? null : <BbbSeal />}
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
