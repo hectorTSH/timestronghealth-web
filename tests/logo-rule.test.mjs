@@ -29,7 +29,7 @@ test("Athens TSH lockups keep the canonical orange rule", () => {
   assert.equal(dark.replace('fill="#FFFFFF" ', ""), light);
 });
 
-test("shared header keeps the tagline and lets it shrink", () => {
+test("shared header keeps a readable tagline that cannot cover the seal", () => {
   const header = fs.readFileSync(new URL("../src/components/Header.tsx", import.meta.url), "utf8");
   const site = fs.readFileSync(new URL("../src/lib/site.ts", import.meta.url), "utf8");
   assert.match(
@@ -37,8 +37,13 @@ test("shared header keeps the tagline and lets it shrink", () => {
     /Promoting the kind of Health that keeps you Strong until the end of Time\./,
   );
   assert.match(header, /siteConfig\.tagline/);
-  assert.match(header, /lg:w-\[10\.5rem\]/);
-  assert.match(header, /xl:w-\[15rem\]/);
+  assert.match(header, /sm:block/);
+  assert.match(header, /md:w-\[13rem\]/);
+  // Once the desktop nav is in the row, the quote takes the next line
+  // instead of a fixed width that paints over the BBB seal.
+  assert.match(header, /lg:order-last/);
+  assert.match(header, /lg:w-full/);
+  assert.doesNotMatch(header, /lg:w-\[10\.5rem\]|xl:w-\[15rem\]/);
   assert.doesNotMatch(header, /overflow-x-hidden|overflow-hidden/);
   assert.match(header, /aria-label="Main"/);
   assert.match(header, /aria-label=\{open \? "Close menu" : "Open menu"\}/);
