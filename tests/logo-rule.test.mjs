@@ -29,21 +29,22 @@ test("Athens TSH lockups keep the canonical orange rule", () => {
   assert.equal(dark.replace('fill="#FFFFFF" ', ""), light);
 });
 
-test("shared header keeps a readable tagline that cannot cover the seal", () => {
+test("header slogan matches the pre-PR8 classes except its width", () => {
   const header = fs.readFileSync(new URL("../src/components/Header.tsx", import.meta.url), "utf8");
   const site = fs.readFileSync(new URL("../src/lib/site.ts", import.meta.url), "utf8");
   assert.match(
     site,
     /Promoting the kind of Health that keeps you Strong until the end of Time\./,
   );
-  assert.match(header, /siteConfig\.tagline/);
-  assert.match(header, /sm:block/);
-  assert.match(header, /md:w-\[13rem\]/);
-  // Once the desktop nav is in the row, the quote takes the next line
-  // instead of a fixed width that paints over the BBB seal.
-  assert.match(header, /lg:order-last/);
-  assert.match(header, /lg:w-full/);
-  assert.doesNotMatch(header, /lg:w-\[10\.5rem\]|xl:w-\[15rem\]/);
+  const current = header.match(/<p className="([^"]+)">\s*\{siteConfig\.tagline\}/)?.[1];
+  const before =
+    "hidden max-w-[16rem] text-[0.7rem] leading-snug text-muted sm:block md:max-w-[13rem] lg:max-w-[18rem] lg:text-xs";
+  const width = /^(min-w-|max-w-|sm:max-w-|md:max-w-|lg:max-w-|xl:max-w-|text-wrap|text-balance|text-pretty)/;
+  const rest = (cls) => cls.split(/\s+/).filter((token) => !width.test(token)).sort();
+  assert.deepEqual(rest(current), rest(before));
+  assert.match(current, /lg:max-w-\[8\.25rem\]/);
+  assert.match(current, /xl:max-w-\[18rem\]/);
+  assert.doesNotMatch(current, /order-last|w-full/);
   assert.doesNotMatch(header, /overflow-x-hidden|overflow-hidden/);
   assert.match(header, /aria-label="Main"/);
   assert.match(header, /aria-label=\{open \? "Close menu" : "Open menu"\}/);
