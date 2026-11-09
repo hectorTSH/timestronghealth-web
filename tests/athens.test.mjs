@@ -58,6 +58,9 @@ test("short Athens page is a January 2027 partnership landing with three brief a
   assert.match(html, /id="partnership"/);
   assert.match(html, /id="interest"/);
   assert.match(html, /logos\/time-strong-health\.svg/);
+  assert.match(html, /logos\/time-strong-health-dark\.svg/);
+  assert.doesNotMatch(html, /dark:brightness-0/);
+  assert.doesNotMatch(html, /dark:invert/);
   assert.match(html, /logos\/athens-personal-fitness\.svg/);
   assert.match(html, /athens-founders-832\.avif 832w/);
   assert.match(html, /athens-founders-576\.webp 576w/);

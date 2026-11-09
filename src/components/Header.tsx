@@ -30,8 +30,8 @@ export function Header({ variant }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex min-w-0 items-center gap-3">
+      <div className="mx-auto flex w-full min-w-0 max-w-6xl items-center justify-between gap-2 px-3 py-3 sm:gap-3 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
           <Link
             href="/"
             className="shrink-0"
@@ -42,13 +42,13 @@ export function Header({ variant }: HeaderProps) {
           {isHome ? (
             <BbbSeal />
           ) : (
-            <p className="hidden max-w-[16rem] text-[0.7rem] leading-snug text-muted sm:block md:max-w-[13rem] lg:max-w-[18rem] lg:text-xs">
+            <p className="hidden w-[11rem] shrink-0 text-[0.7rem] leading-snug text-muted sm:block md:w-[13rem] lg:w-[10.5rem] lg:text-xs xl:w-[15rem]">
               {siteConfig.tagline}
             </p>
           )}
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           {isHome ? null : <BbbSeal />}
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
