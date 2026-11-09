@@ -5,7 +5,7 @@ Stock photos below are free to use under the [Pexels License](https://www.pexels
 | Filename | Source | Photographer / studio | Page / ID | License |
 |----------|--------|------------------------|-----------|---------|
 | `hero-home.jpg` | Pexels | Kampus Production | [7551608](https://www.pexels.com/photo/a-woman-teaching-an-elderly-man-doing-an-exercise-7551608/) | Pexels License |
-| `hero-coaching.jpg` | Pexels | Anna Shvets | [4587381](https://www.pexels.com/photo/an-elderly-woman-workout-watch-by-the-fitness-coach-4587381/) | Pexels License |
+| `hero-coaching.jpg` | Pexels | Mikhail Nilov | [6975786](https://www.pexels.com/photo/senior-couple-doing-yoga-exercise-at-home-6975786/) | Pexels License |
 | `hero-kettlebell.jpg` | Pexels | Kampus Production | [6922174](https://www.pexels.com/photo/6922174/) | Pexels License |
 | `hero-strength.jpg` | Pexels | Ron Lach | [7927939](https://www.pexels.com/photo/an-elderly-woman-holding-dumbbells-7927939/) | Pexels License |
 | `session-guided.jpg` | Pexels | Kampus Production | [7551627](https://www.pexels.com/photo/a-man-in-blue-sweater-wearing-eyeglasses-doing-exercise-7551627/) | Pexels License |

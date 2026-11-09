@@ -114,11 +114,11 @@ export default function HomePage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md lg:aspect-[5/4]">
               <Image
                 src="/images/hero-coaching.jpg"
-                alt="A fitness coach guiding an older adult through a standing dumbbell exercise"
+                alt="Two adults pressing their palms together during a standing exercise in a bright living room"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="img-fade object-cover object-[92%_center]"
+                className="img-fade object-cover object-center"
               />
               <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-black/35 via-transparent to-transparent lg:block" />
               <FocusCard className="absolute bottom-4 left-4 right-4 hidden rounded-xl border border-border bg-background/95 p-4 shadow-sm backdrop-blur-sm lg:block" />

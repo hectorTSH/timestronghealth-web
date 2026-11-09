@@ -14,13 +14,13 @@
 - License must be verified and credited. Pexels License allows website use. Do not imply the people endorse Time Strong Health.
 - Keep this exact focus copy: “What we focus on”, “Moving with confidence”, “Staying strong”, “Supporting fall-risk reduction”, “Comfort of your own home”.
 - Below the `lg` breakpoint (stacked hero), the card sits under the photo with no overlap.
-- At `lg` and up, keep the existing overlay card. Set `object-position` to `92% center` so both faces and the raised dumbbell stay in frame above that card.
+- At `lg` and up, keep the existing overlay card. Keep the crop centered so both people stay in the desktop frame.
 - Do not edit the Athens handshake hero, header, or logo files.
 - Do not merge or deploy production. Preview only.
 
 ## Chosen photo
 
-Pexels [4587381](https://www.pexels.com/photo/an-elderly-woman-workout-watch-by-the-fitness-coach-4587381/), Anna Shvets, 7 June 2020, original 5618×3745. Pexels titles it “Elderly woman lifting dumbbells with guidance from a trainer indoors.” Shipped file: `public/images/hero-coaching.jpg` at 2800×1867. The room is a bright studio, not a furnished living room. Free libraries did not have a high-resolution home interior that also showed a coach, an older adult, and a standing dumbbell exercise without a gym or a treatment table.
+Pexels [6975786](https://www.pexels.com/photo/senior-couple-doing-yoga-exercise-at-home-6975786/), Mikhail Nilov, 27 February 2021, original 6000×4000. Pexels titles it “A mature couple doing yoga pressing hands together” and describes a senior couple exercising at home. Shipped file: `public/images/hero-coaching.jpg` at 2800×1867. The setting is a bright living room. The two adults are standing and working together; the facing adult has dark hair and reads as a mature adult rather than a white-haired person in their seventies. Anna Shvets 4587381 was rejected because the client did not read as clearly older and the room was a studio with a gym rack.
 
 ## Tasks
 
