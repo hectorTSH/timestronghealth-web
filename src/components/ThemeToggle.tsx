@@ -9,7 +9,7 @@ export function ThemeToggle({ className }: { className?: string }) {
     <button
       type="button"
       onClick={toggle}
-      className={`inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition hover:border-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-background ${className ?? ""}`}
+      className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border bg-background text-foreground transition hover:border-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-background ${className ?? ""}`}
       aria-label="Toggle light and dark mode"
       title="Toggle light and dark mode"
     >

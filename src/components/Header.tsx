@@ -62,7 +62,7 @@ export function Header({ variant }: HeaderProps) {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "rounded-full px-4 py-2 text-base font-medium transition",
+                    "rounded-full px-4 py-2 text-base font-medium transition lg:px-3 xl:px-4",
                     active
                       ? "bg-brand-soft text-foreground"
                       : "text-muted hover:text-foreground",
