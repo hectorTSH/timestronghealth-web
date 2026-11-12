@@ -9,12 +9,12 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Athens’ Trusted Names, Now Making House Calls.",
   description:
-    "Coming January 2027. Time Strong Health™ is partnering with Athens Personal Fitness to provide concierge in-home fitness and wellness for older adults, with coverage in Athens, GA and nearby Oconee and Jackson counties.",
+    "Coming February 2027. Time Strong Health™ is partnering with Athens Personal Fitness to provide concierge in-home fitness and wellness for older adults, with coverage in Athens, GA and nearby Oconee and Jackson counties.",
   alternates: { canonical: "/athens" },
   openGraph: {
     title: "Athens’ Trusted Names, Now Making House Calls.",
     description:
-      "Coming January 2027. Time Strong Health™ and Athens Personal Fitness — concierge in-home fitness and wellness for older adults in Athens, GA and nearby Oconee and Jackson counties.",
+      "Coming February 2027. Time Strong Health™ and Athens Personal Fitness — concierge in-home fitness and wellness for older adults in Athens, GA and nearby Oconee and Jackson counties.",
     url: "/athens",
   },
 };
@@ -56,7 +56,7 @@ export default function AthensPage() {
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-x-12">
           <div className="relative z-10 @container">
             <p className="font-serif text-3xl italic text-brand sm:text-4xl">
-              Coming January 2027.
+              Coming February 2027.
             </p>
             <h1 className="mt-3 text-[clamp(1.35rem,8.4cqi,3.4rem)] leading-[1.08] sm:mt-4">
               <span className="block whitespace-nowrap">Athens’ Trusted Names,</span>
@@ -170,7 +170,7 @@ export default function AthensPage() {
         <SectionHeading
           eyebrow="The Athens list"
           title="Be first through the door"
-          description="Tell us if you are joining for yourself, for someone you love, or as a referring clinician. We'll reach out before January 2027."
+          description="Tell us if you are joining for yourself, for someone you love, or as a referring clinician. We'll reach out before February 2027."
         />
         <div className="max-w-3xl">
           <AthensInterestForm />
