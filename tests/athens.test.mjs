@@ -33,18 +33,18 @@ async function postJson(body, headers = { "Content-Type": "application/json" }) 
   });
 }
 
-test("short Athens page is a January 2027 partnership landing with three brief audiences", async () => {
+test("short Athens page is a February 2027 partnership landing with three brief audiences", async () => {
   const response = await fetch(new URL("/athens", baseUrl));
   assert.equal(response.status, 200);
   const html = await response.text();
   const text = mainText(html);
 
   assert.match(text, /Athens’ Trusted Names, Now Making House Calls\./);
-  assert.match(text, /Coming January 2027/);
+  assert.match(text, /Coming February 2027/);
   assert.match(text, /Athens, GA and nearby Oconee and Jackson counties/);
   assert.match(text, /concierge in-home fitness and wellness for older adults/);
   assert.match(text, /Founded by Hector A\. Mallar, DPT, CSFS/);
-  assert.ok(text.indexOf("Coming January 2027") < text.indexOf("Athens’ Trusted Names"));
+  assert.ok(text.indexOf("Coming February 2027") < text.indexOf("Athens’ Trusted Names"));
   assert.ok(text.indexOf("Now Making House Calls") < text.indexOf("Athens, GA"));
   assert.doesNotMatch(text, /ATHENS, GA/);
   assert.match(text, /Hector A\. Mallar, DPT, CSFS/);
