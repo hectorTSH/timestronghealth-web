@@ -39,7 +39,8 @@ test("short Athens page is a February 2027 partnership landing with three brief 
   const html = await response.text();
   const text = mainText(html);
 
-  assert.match(text, /Athens’ Trusted Names, Now Making House Calls\./);
+  assert.match(text, /Athens’ Trusted Names, Now Making House Calls Too\./);
+  assert.doesNotMatch(text, /House Calls, Too/);
   assert.match(text, /Coming February 2027/);
   assert.match(text, /Athens, GA and nearby Oconee and Jackson counties/);
   assert.match(text, /concierge in-home fitness and wellness for older adults/);
