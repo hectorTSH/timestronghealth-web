@@ -7,12 +7,12 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Athens’ Trusted Names, Now Making House Calls.",
+  title: "Athens’ Trusted Names, Now Making House Calls Too.",
   description:
     "Coming February 2027. Time Strong Health™ is partnering with Athens Personal Fitness to provide concierge in-home fitness and wellness for older adults, with coverage in Athens, GA and nearby Oconee and Jackson counties.",
   alternates: { canonical: "/athens" },
   openGraph: {
-    title: "Athens’ Trusted Names, Now Making House Calls.",
+    title: "Athens’ Trusted Names, Now Making House Calls Too.",
     description:
       "Coming February 2027. Time Strong Health™ and Athens Personal Fitness — concierge in-home fitness and wellness for older adults in Athens, GA and nearby Oconee and Jackson counties.",
     url: "/athens",
@@ -58,9 +58,9 @@ export default function AthensPage() {
             <p className="font-serif text-3xl italic text-brand sm:text-4xl">
               Coming February 2027.
             </p>
-            <h1 className="mt-3 text-[clamp(1.35rem,8.4cqi,3.4rem)] leading-[1.08] sm:mt-4">
+            <h1 className="mt-3 text-[clamp(1.2rem,7.2cqi,3.4rem)] leading-[1.08] sm:mt-4">
               <span className="block whitespace-nowrap">Athens’ Trusted Names,</span>
-              <span className="block whitespace-nowrap">Now Making House Calls.</span>
+              <span className="block whitespace-nowrap">Now Making House Calls Too.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-neutral-300 sm:mt-6 sm:text-xl">
               Time Strong Health™ is partnering with Athens Personal Fitness to
