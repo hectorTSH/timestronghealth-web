@@ -47,7 +47,7 @@ const programs = [
 const forIndividuals = [
   "Fitness training tailored to your goals and what you need for daily life",
   "Balance and fall-risk reduction strategies you can apply every day",
-  "A consistent fitness partner who understands how movement disorders progress",
+  "A consistent fitness partner who understands how movement challenges progress",
   "Programs that adapt as your needs change over time",
 ];
 
@@ -56,6 +56,28 @@ const forCaregivers = [
   "Strategies to protect your own body while supporting your loved one",
   "Education and confidence-building so you feel prepared, not overwhelmed",
 ];
+
+const focusPoints = [
+  "Moving with confidence",
+  "Staying strong",
+  "Supporting fall-risk reduction",
+  "Comfort of your own home",
+] as const;
+
+function FocusCard({ className }: { className: string }) {
+  return (
+    <div className={className}>
+      <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark">
+        What we focus on
+      </p>
+      <ul className="mt-2 grid gap-1 text-base text-foreground sm:grid-cols-2">
+        {focusPoints.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -75,8 +97,8 @@ export default function HomePage() {
             </h1>
             <p className="animate-fade-up-delay-2 mt-6 max-w-2xl text-xl text-muted">
               Specialized in-home fitness and wellness programs for active
-              adults living with Parkinson&apos;s disease and other movement
-              disorders — and the people who care for them.
+              adults living with Parkinson&apos;s Disease and other neurological
+              movement challenges, and the people who care for them.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={siteConfig.phoneHref}>
@@ -88,27 +110,20 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="animate-fade-up-delay-2 relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md lg:aspect-[5/4]">
-            <Image
-              src="/images/hero-home.jpg"
-              alt="Fitness specialist guiding an older adult through a calm balance exercise in a bright home"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="img-fade object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-border bg-background/95 p-4 shadow-sm backdrop-blur-sm">
-              <p className="text-sm font-semibold uppercase tracking-wide text-brand-dark">
-                What we focus on
-              </p>
-              <ul className="mt-2 grid gap-1 text-base text-foreground sm:grid-cols-2">
-                <li>Moving with confidence</li>
-                <li>Staying strong</li>
-                <li>Supporting fall-risk reduction</li>
-                <li>Comfort of your own home</li>
-              </ul>
+          <div className="animate-fade-up-delay-2">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted-bg shadow-md lg:aspect-[5/4]">
+              <Image
+                src="/images/hero-coaching.jpg"
+                alt="Two adults pressing their palms together during a standing exercise in a bright living room"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="img-fade object-cover object-center"
+              />
+              <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-black/35 via-transparent to-transparent lg:block" />
+              <FocusCard className="absolute bottom-4 left-4 right-4 hidden rounded-xl border border-border bg-background/95 p-4 shadow-sm backdrop-blur-sm lg:block" />
             </div>
+            <FocusCard className="mt-4 rounded-xl border border-border bg-background p-4 shadow-sm lg:hidden" />
           </div>
         </div>
       </section>
@@ -117,7 +132,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="What we do"
           title="One-on-one fitness that fits real life"
-          description="Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for older adults and people living with Parkinson's disease and other neurological movement disorders."
+          description="Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for older adults and people living with Parkinson's Disease and other neurological movement challenges."
         />
         <p className="max-w-3xl text-lg text-muted">
           We focus on what matters most in daily life: moving with confidence,
@@ -135,7 +150,7 @@ export default function HomePage() {
           <Card>
             <h3 className="text-2xl">For individuals</h3>
             <p className="mt-2 text-base text-muted">
-              With Parkinson&apos;s & movement disorders
+              With Parkinson&apos;s & movement challenges
             </p>
             <ul className="mt-5 space-y-3 text-base">
               {forIndividuals.map((item) => (
@@ -164,8 +179,8 @@ export default function HomePage() {
             <h3 className="text-2xl">For referring physicians</h3>
             <p className="mt-5 text-base leading-relaxed text-muted">
               Time Strong Health bridges the gap between skilled rehabilitation
-              and long-term functional fitness. Our founder, Hector Mallar, PT,
-              DPT, CSFS, brings over a decade of experience working with active
+              and long-term functional fitness. Our founder, Hector A. Mallar,
+              DPT, CSFS, brings over 15 years of experience working with active
               adults with movement challenges — now applied through private-pay
               fitness and wellness programming designed to sustain mobility,
               support fall-risk reduction goals, and support quality of life well beyond the
@@ -224,20 +239,19 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="Meet the founder"
-              title="Hector A. Mallar, PT, DPT, CSFS (Certified Senior Fitness Specialist)"
+              title="Hector A. Mallar, DPT, CSFS"
               light
             />
             <div className="max-w-3xl space-y-5 text-lg text-neutral-300">
               <p>
-                Hector A. Mallar, PT, DPT, CSFS founded Time Strong Health after
-                watching his own grandparents navigate the challenges of aging and
-                movement disorders — and recognizing how few options existed between
+                Hector A. Mallar, DPT, CSFS founded Time Strong Health after
+                watching his own grandparents navigate through movement
+                challenges, and recognizing how few options existed between
                 clinical rehab and going it alone.
               </p>
               <p>
-                A University of Georgia alumnus with a Doctorate in Physical Therapy
-                from Georgia State University, Hector brings over 10 years of
-                experience optimizing movement and helping older adults work on fall-risk reduction through fitness,
+                Hector brings over 15 years of experience optimizing movement and
+                helping older adults work on fall-risk reduction through exercise,
                 incorporating deep clinical knowledge into every session. Today, he
                 applies that expertise through fitness and wellness programming —
                 helping clients stay active, strong, and independent for as long as
@@ -260,7 +274,7 @@ export default function HomePage() {
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button href={siteConfig.phoneHref}>
-                {siteConfig.phone}
+                Call {siteConfig.phone}
               </Button>
               <Button href={siteConfig.emailHref} variant="ghost">
                 {siteConfig.email}

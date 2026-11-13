@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readdirSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
@@ -41,6 +41,14 @@ function listAppRoutes(dir, segments = []) {
   return routes;
 }
 
+function pageSource(route) {
+  const dir =
+    route === "/" ? appDir : path.join(appDir, ...route.split("/").filter(Boolean));
+  const page = readdirSync(dir).find((name) => /^page\.(tsx|ts|jsx|js)$/.test(name));
+  assert.ok(page, `missing page file for ${route}`);
+  return readFileSync(path.join(dir, page), "utf8");
+}
+
 function decodeEntities(value) {
   return value
     .replace(/&amp;/g, "&")
@@ -76,8 +84,19 @@ test("robots.txt allows every crawler and publishes the sitemap", async () => {
 
 test("sitemap.xml lists every public page", async () => {
   const routes = listAppRoutes(appDir).sort();
-  assert.deepEqual(routes, ["/", "/about", "/contact", "/resources", "/tos-privacy"]);
-  for (const route of routes) {
+  const noindex = routes.filter((route) => /index\s*:\s*false/.test(pageSource(route)));
+  const indexable = routes.filter((route) => !noindex.includes(route));
+  // /athens-full stays on disk as an unlinked archive and must not be advertised.
+  assert.deepEqual(noindex, ["/athens-full"]);
+  assert.deepEqual(indexable, [
+    "/",
+    "/about",
+    "/athens",
+    "/contact",
+    "/resources",
+    "/tos-privacy",
+  ]);
+  for (const route of indexable) {
     assert.equal(route.includes("["), false, `dynamic route ${route} needs an explicit sitemap entry`);
   }
 
@@ -86,10 +105,11 @@ test("sitemap.xml lists every public page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /xml/);
   const xml = await response.text();
   const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]).sort();
-  const expected = routes
+  const expected = indexable
     .map((route) => (route === "/" ? siteOrigin : `${siteOrigin}${route}`))
     .sort();
   assert.deepEqual(locs, expected);
+  assert.equal(locs.some((loc) => loc.endsWith("/athens-full")), false);
 });
 
 test("every public page server-renders its main text without JavaScript", async () => {

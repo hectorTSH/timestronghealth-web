@@ -1,9 +1,13 @@
-# Contact — site copy (updated 2026-09-13)
+# Contact — site copy (updated 2026-11-02)
 
 If you have any questions or would like more information, we would love to help.
 
 ## Contact Us
-For general inquiries call or text 1-404-458-7169 or email us using the buttons below.
+For general inquiries call or text 404-458-7169 or send us a message below. We typically respond within 24–48 hours.
+
+Send a message: Name, Email, and a brief message, then Submit. Messages go to the info@timestronghealth.com inbox.
+
+Call or email: Call 404-458-7169 / Email info@timestronghealth.com
 
 Service area: BUCKHEAD / MIDTOWN / SANDY SPRINGS / WOODSTOCK
 

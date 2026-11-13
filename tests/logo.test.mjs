@@ -62,3 +62,27 @@ test("header swaps both logos in the server HTML and keeps the alt text", async 
   assert.match(html, /dark:block/);
   assert.doesNotMatch(html, /®|&reg;|&#174;|&#xae;/i);
 });
+
+test("inner pages keep the slogan between the TM logos and the BBB seal", async () => {
+  const response = await fetch(new URL("/about", baseUrl));
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  const header = html.match(/<header\b[\s\S]*?<\/header>/)?.[0];
+  assert.ok(header, "about page must render a header");
+  const logoAt = header.search(/logo-wordmark\.png/);
+  const darkAt = header.search(/logo-dark\.png/);
+  const sloganAt = header.indexOf(
+    "Promoting the kind of Health that keeps you Strong until the end of Time.",
+  );
+  const bbbAt = header.indexOf("bbb.org");
+  assert.ok(logoAt >= 0, "header must include the light TM wordmark");
+  assert.ok(darkAt >= 0, "header must include the dark TM wordmark");
+  assert.ok(sloganAt >= 0, "header must include the slogan");
+  assert.ok(bbbAt >= 0, "header must include the BBB seal");
+  assert.ok(Math.max(logoAt, darkAt) < sloganAt, "slogan follows the logos");
+  assert.ok(sloganAt < bbbAt, "BBB seal follows the end of the slogan");
+  assert.match(header, /dark:hidden/);
+  assert.match(header, /dark:block/);
+  assert.doesNotMatch(header, /logo-wordmark\.svg|logo-dark\.svg/);
+  assert.doesNotMatch(header, /®|&reg;|&#174;|&#xae;/i);
+});

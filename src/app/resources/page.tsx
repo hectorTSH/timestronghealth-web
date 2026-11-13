@@ -6,7 +6,7 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "Helpful Parkinson's, movement-disorder, and senior fitness education resources for clients and caregivers in Metro Atlanta and beyond.",
+    "Helpful Parkinson's, movement-challenge, and senior fitness education resources for clients and caregivers in Metro Atlanta and beyond.",
 };
 
 type Resource = {

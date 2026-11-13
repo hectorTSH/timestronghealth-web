@@ -23,15 +23,17 @@ export const siteConfig = {
   nav: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/athens", label: "Athens" },
     { href: "/resources", label: "Resources" },
     { href: "/contact", label: "Contact" },
   ],
 } as const;
 
-/** Indexable pages. Keep this aligned with `src/app` routes (including legal). */
+/** Indexable pages. Keep this aligned with public `src/app` routes (including legal). */
 export const publicPages = [
   { path: "/", changeFrequency: "monthly", priority: 1 },
   { path: "/about", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/athens", changeFrequency: "monthly", priority: 0.8 },
   { path: "/resources", changeFrequency: "monthly", priority: 0.8 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
   { path: "/tos-privacy", changeFrequency: "yearly", priority: 0.3 },
