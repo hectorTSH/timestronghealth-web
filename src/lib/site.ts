@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "Time Strong Health",
+  url: "https://www.timestronghealth.com",
   tagline:
     "Promoting the kind of Health that keeps you Strong until the end of Time.",
   phone: "404-458-7169",
@@ -27,3 +28,18 @@ export const siteConfig = {
     { href: "/contact", label: "Contact" },
   ],
 } as const;
+
+/** Indexable pages. Keep this aligned with public `src/app` routes (including legal). */
+export const publicPages = [
+  { path: "/", changeFrequency: "monthly", priority: 1 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/athens", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/resources", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/tos-privacy", changeFrequency: "yearly", priority: 0.3 },
+] as const;
+
+export function publicPageUrl(path: string): string {
+  if (path === "/") return siteConfig.url;
+  return `${siteConfig.url}${path}`;
+}

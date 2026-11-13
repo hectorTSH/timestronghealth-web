@@ -49,8 +49,10 @@ test("contact page renders call and email buttons from site.ts", async () => {
 
   assert.ok(call, `Expected a Call button linking to ${phoneHref} and showing ${phone}`);
   assert.ok(mail, `Expected an Email button linking to ${emailHref} and showing ${email}`);
-  assert.doesNotMatch(main, /<form\b/i, "Contact page must not render a form");
-  assert.doesNotMatch(main, /contact form/i, "Contact page must not refer to a contact form");
+  assert.match(main, /<form\b/i, "Contact page keeps the message form");
+  assert.match(main, /name="name"/);
+  assert.match(main, /name="email"/);
+  assert.match(main, /name="message"/);
   assert.doesNotMatch(main, /your message was received/i);
 });
 
