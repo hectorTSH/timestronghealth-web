@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Disclaimer } from "@/components/Disclaimer";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { pageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = pageMetadata({
+  title: "In-Home Personal Trainer Atlanta | Time Strong Health",
+  description:
+    "In-home fitness for older adults in Atlanta, including Parkinson's fitness. Private-pay, one-on-one sessions in the client's home across Buckhead, Midtown, Sandy Springs, and Woodstock.",
+  path: "/",
+  absoluteTitle: true,
+});
 
 const programs = [
   {
@@ -86,19 +96,23 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:items-center">
           <div className="relative z-10">
             <p className="animate-fade-up mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-brand-dark">
-              In-home fitness & wellness · {siteConfig.serviceArea}
+              In-home personal trainer · Atlanta
             </p>
             <h1 className="animate-fade-up-delay-1 max-w-3xl text-4xl sm:text-5xl lg:text-6xl">
+              In-home fitness for older adults in Atlanta
+            </h1>
+            <p className="animate-fade-up-delay-1 mt-4 max-w-3xl font-serif text-2xl leading-snug text-foreground sm:text-3xl">
               {siteConfig.tagline.split(/\b(Health|Strong|Time)\b/g).map((part, index) =>
                 index % 2 === 1 ? (
                   <span key={index} className="text-brand">{part}</span>
                 ) : part,
               )}
-            </h1>
+            </p>
             <p className="animate-fade-up-delay-2 mt-6 max-w-2xl text-xl text-muted">
-              Specialized in-home fitness and wellness programs for active
-              adults living with Parkinson&apos;s Disease and other neurological
-              movement challenges, and the people who care for them.
+              Parkinson&apos;s fitness for active adults living with
+              Parkinson&apos;s Disease and other neurological movement
+              challenges, and the people who care for them. Serving{" "}
+              {siteConfig.serviceArea}.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={siteConfig.phoneHref}>
@@ -131,7 +145,7 @@ export default function HomePage() {
       <Section>
         <SectionHeading
           eyebrow="What we do"
-          title="One-on-one fitness that fits real life"
+          title="Parkinson's fitness in Atlanta"
           description="Time Strong Health provides one-on-one, in-home fitness and wellness programs designed specifically for older adults and people living with Parkinson's Disease and other neurological movement challenges."
         />
         <p className="max-w-3xl text-lg text-muted">

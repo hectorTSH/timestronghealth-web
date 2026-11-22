@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms & Privacy",
   description:
     "Terms and Conditions and Privacy Policy for Time Strong Health LLC.",
-};
+  path: "/tos-privacy",
+});
 
 function LegalBlock({
   title,

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BbbSeal } from "@/components/BbbSeal";
+import { GoogleProfileLinks } from "@/components/GoogleProfileLinks";
 import { SiteLogo } from "@/components/SiteLogo";
 import { siteConfig } from "@/lib/site";
 
@@ -59,6 +60,7 @@ export function Footer() {
               </span>
               {siteConfig.address}
             </li>
+            <GoogleProfileLinks linkClassName="text-neutral-300 hover:text-brand" />
           </ul>
           <nav aria-label="Social media" className="mt-5 flex items-center gap-2">
             <a

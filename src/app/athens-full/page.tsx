@@ -14,20 +14,17 @@ import { Disclaimer } from "@/components/Disclaimer";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { pageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Athens — full page",
-  description:
-    "Longer Athens page kept for a later edit, including bios for the Athens Personal Fitness partners. The public landing is /athens.",
-  robots: { index: false, follow: false },
-  alternates: { canonical: "/athens-full" },
-  openGraph: {
+  ...pageMetadata({
     title: "Athens — full page",
     description:
-      "Archive of the longer Athens page. Not linked in the public nav.",
-    url: "/athens-full",
-  },
+      "Longer Athens page kept for a later edit, including bios for the Athens Personal Fitness partners. The public landing is /athens.",
+    path: "/athens-full",
+  }),
+  robots: { index: false, follow: false },
 };
 
 const onDark =

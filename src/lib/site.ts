@@ -1,5 +1,28 @@
+/**
+ * TODO(hector): Paste the live Google links. Leave either string empty until
+ * you have it — empty values are omitted from the page, the footer, and JSON-LD.
+ * - profile: share link for the "Time Strong Health LLC" Google Business Profile
+ * - review: "Leave us a Google review" / write-a-review link
+ */
+export const GOOGLE_BUSINESS_PROFILE_URL: {
+  profile: string;
+  review: string;
+} = {
+  profile: "",
+  review: "",
+};
+
+/** Hosts that should 308 to the canonical www origin. Preview URLs are not listed. */
+export const nonCanonicalHosts = [
+  "timestronghealth.com",
+  "timestronghealth-web.vercel.app",
+  "timestronghealth-web-hectortshs-projects.vercel.app",
+  "timestronghealth-web-git-main-hectortshs-projects.vercel.app",
+] as const;
+
 export const siteConfig = {
   name: "Time Strong Health",
+  legalName: "Time Strong Health LLC",
   url: "https://www.timestronghealth.com",
   tagline:
     "Promoting the kind of Health that keeps you Strong until the end of Time.",
@@ -42,4 +65,13 @@ export const publicPages = [
 export function publicPageUrl(path: string): string {
   if (path === "/") return siteConfig.url;
   return `${siteConfig.url}${path}`;
+}
+
+export function googleProfileLinks() {
+  const links: { href: string; label: string }[] = [];
+  const profile = GOOGLE_BUSINESS_PROFILE_URL.profile.trim();
+  const review = GOOGLE_BUSINESS_PROFILE_URL.review.trim();
+  if (profile) links.push({ href: profile, label: "Google Business Profile" });
+  if (review) links.push({ href: review, label: "Leave us a Google review" });
+  return links;
 }
