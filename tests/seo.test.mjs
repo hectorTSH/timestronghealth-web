@@ -134,19 +134,27 @@ test("JSON-LD describes a service-area business without a street or pin", async 
     "https://www.facebook.com/timestronghealth",
     "https://www.linkedin.com/company/time-strong-health-llc",
     "https://www.bbb.org/us/ga/woodstock/profile/health-and-wellness/time-strong-health-llc-0443-91844591",
+    "https://www.google.com/maps?cid=1694578028783323055",
   ]);
+  assert.doesNotMatch(raw, /maps\.app\.goo\.gl|g\.page/);
   assert.equal(person.name, "Hector A. Mallar, DPT, CSFS");
   assert.equal(person.jobTitle, "Founder");
   assert.equal(service.offers, undefined);
   assert.doesNotMatch(raw, /Physician|MedicalClinic|PhysicalTherapy|priceRange|"geo"/);
 });
 
-test("Google profile links stay hidden until a URL is configured", async () => {
+test("Google profile and review links render on the contact page and in the footer", async () => {
+  const profile = "https://maps.app.goo.gl/6KcjnnUjDTtJtmiZ9";
+  const review = "https://g.page/r/CTcRsMTQObs4EBM/review";
   const response = await fetch(new URL("/contact", baseUrl));
   const html = await response.text();
-  assert.doesNotMatch(html, /Leave us a Google review/);
-  assert.doesNotMatch(html, /Google Business Profile/);
-  assert.doesNotMatch(html, /maps\.app\.goo\.gl|g\.page/);
+  const footer = html.match(/<footer\b[^>]*>([\s\S]*?)<\/footer>/)?.[1];
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1];
+  assert.ok(footer && main);
+  for (const region of [footer, main]) {
+    assert.match(region, new RegExp(`href="${profile}"[^>]*>Google Business Profile`));
+    assert.match(region, new RegExp(`href="${review.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"[^>]*>Leave us a Google review`));
+  }
 });
 
 test("apex and production aliases redirect to the www host", async () => {

@@ -1,16 +1,20 @@
 /**
- * TODO(hector): Paste the live Google links. Leave either string empty until
- * you have it — empty values are omitted from the page, the footer, and JSON-LD.
+ * Public Google links. Empty strings stay off the page.
  * - profile: share link for the "Time Strong Health LLC" Google Business Profile
- * - review: "Leave us a Google review" / write-a-review link
+ * - review: "Leave us a Google review" link
+ * JSON-LD sameAs uses GOOGLE_MAPS_CID_URL, not these short links.
  */
 export const GOOGLE_BUSINESS_PROFILE_URL: {
   profile: string;
   review: string;
 } = {
-  profile: "",
-  review: "",
+  profile: "https://maps.app.goo.gl/6KcjnnUjDTtJtmiZ9",
+  review: "https://g.page/r/CTcRsMTQObs4EBM/review",
 };
+
+/** Stable Maps identity for JSON-LD. Short links stay on the visible anchors. */
+export const GOOGLE_MAPS_CID_URL =
+  "https://www.google.com/maps?cid=1694578028783323055";
 
 /** Hosts that should 308 to the canonical www origin. Preview URLs are not listed. */
 export const nonCanonicalHosts = [

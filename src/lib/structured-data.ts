@@ -1,4 +1,4 @@
-import { GOOGLE_BUSINESS_PROFILE_URL, siteConfig } from "@/lib/site";
+import { GOOGLE_MAPS_CID_URL, siteConfig } from "@/lib/site";
 
 const businessId = `${siteConfig.url}/#business`;
 const personId = `${siteConfig.url}/about#hector`;
@@ -37,9 +37,8 @@ function sameAs() {
     "https://www.facebook.com/timestronghealth",
     "https://www.linkedin.com/company/time-strong-health-llc",
     siteConfig.bbbUrl,
+    GOOGLE_MAPS_CID_URL,
   ];
-  const profile = GOOGLE_BUSINESS_PROFILE_URL.profile.trim();
-  if (profile) links.push(profile);
   return links;
 }
 
