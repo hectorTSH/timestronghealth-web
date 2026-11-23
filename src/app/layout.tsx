@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Caudex, Source_Sans_3 } from "next/font/google";
 import { ViewTransition } from "react";
 import { Footer } from "@/components/Footer";
@@ -63,6 +65,8 @@ export default function RootLayout({
           </ViewTransition>
           <Footer />
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
