@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Card } from "@/components/ui/Card";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Resources",
+export const metadata: Metadata = pageMetadata({
+  title: "Parkinson's Fitness Resources",
   description:
-    "Helpful Parkinson's, movement-challenge, and senior fitness education resources for clients and caregivers in Metro Atlanta and beyond.",
-};
+    "Parkinson's, movement-challenge, and senior fitness education resources for clients and caregivers, alongside in-home fitness for older adults in Atlanta.",
+  path: "/resources",
+});
 
 type Resource = {
   name: string;

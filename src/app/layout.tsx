@@ -3,6 +3,7 @@ import { Caudex, Source_Sans_3 } from "next/font/google";
 import { ViewTransition } from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { siteConfig } from "@/lib/site";
 import { themeInitScript } from "@/lib/theme";
@@ -23,17 +24,19 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} | In-Home Fitness & Wellness for Parkinson's`,
+    default: `In-Home Personal Trainer Atlanta | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Specialized in-home fitness and wellness programs for active adults living with Parkinson's Disease and other movement challenges in Buckhead, Midtown, Sandy Springs, and Woodstock.",
+    "In-home fitness for older adults in Atlanta, including Parkinson's fitness. Private-pay, one-on-one sessions in the client's home across Buckhead, Midtown, Sandy Springs, and Woodstock.",
   metadataBase: new URL(siteConfig.url),
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.tagline,
     type: "website",
     locale: "en_US",
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -52,6 +55,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        <JsonLd />
         <ThemeProvider>
           <Header />
           <ViewTransition>

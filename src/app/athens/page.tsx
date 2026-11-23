@@ -4,20 +4,15 @@ import { AthensInterestForm, AthensListLink } from "@/app/athens/AthensInterestF
 import { Disclaimer } from "@/components/Disclaimer";
 import { Button } from "@/components/ui/Button";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { pageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Athens’ Trusted Names, Now Making House Calls Too.",
   description:
     "Coming February 2027. Time Strong Health™ is partnering with Athens Personal Fitness to provide concierge in-home fitness and wellness for older adults, with coverage in Athens, GA and nearby Oconee and Jackson counties.",
-  alternates: { canonical: "/athens" },
-  openGraph: {
-    title: "Athens’ Trusted Names, Now Making House Calls Too.",
-    description:
-      "Coming February 2027. Time Strong Health™ and Athens Personal Fitness — concierge in-home fitness and wellness for older adults in Athens, GA and nearby Oconee and Jackson counties.",
-    url: "/athens",
-  },
-};
+  path: "/athens",
+});
 
 const onDark =
   "!border-white/40 !bg-transparent !text-white hover:!border-white hover:!bg-white/10 focus-visible:!ring-white";

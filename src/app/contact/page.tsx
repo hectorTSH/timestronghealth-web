@@ -4,13 +4,16 @@ import { Disclaimer } from "@/components/Disclaimer";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
+import { GoogleProfileLinks } from "@/components/GoogleProfileLinks";
+import { pageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = pageMetadata({
+  title: "Book an In-Home Personal Trainer in Atlanta",
   description:
-    "Contact Time Strong Health for in-home Parkinson's fitness and wellness coaching in Buckhead, Midtown, Sandy Springs, and Woodstock.",
-};
+    "Book in-home fitness for older adults in Atlanta, including Parkinson's fitness. Call or text 404-458-7169. Serving Buckhead, Midtown, Sandy Springs, and Woodstock.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -20,7 +23,7 @@ export default function ContactPage() {
           Contact
         </p>
         <h1 className="max-w-3xl text-4xl sm:text-5xl">
-          We would love to help
+          Book in-home fitness for older adults in Atlanta
         </h1>
         <p className="mt-6 max-w-3xl text-xl text-muted">
           If you have any questions or would like more information, reach out.
@@ -44,7 +47,9 @@ export default function ContactPage() {
             </Card>
 
             <Card className="p-6 sm:p-8">
-              <h2 className="mb-6 text-3xl">Call or email</h2>
+              <h2 className="mb-6 text-3xl">
+                Parkinson&apos;s fitness in Atlanta
+              </h2>
               <div className="flex flex-col gap-4">
                 <Button
                   href={siteConfig.phoneHref}
@@ -101,6 +106,7 @@ export default function ContactPage() {
                   </span>
                   {siteConfig.address}
                 </li>
+                <GoogleProfileLinks linkClassName="font-semibold text-foreground underline-offset-4 hover:text-brand-dark hover:underline" />
               </ul>
             </Card>
 

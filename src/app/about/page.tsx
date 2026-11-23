@@ -4,13 +4,15 @@ import { Disclaimer } from "@/components/Disclaimer";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { pageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "About",
+export const metadata: Metadata = pageMetadata({
+  title: "In-Home Fitness for Older Adults in Atlanta",
   description:
-    "About Time Strong Health — in-home fitness and wellness built for the Parkinson's community in Buckhead, Midtown, Sandy Springs, and Woodstock.",
-};
+    "In-home personal trainer for older adults in Atlanta, including Parkinson's fitness. Time Strong Health works one-on-one in Buckhead, Midtown, Sandy Springs, and Woodstock.",
+  path: "/about",
+});
 
 const focusAreas = [
   {
@@ -66,7 +68,7 @@ export default function AboutPage() {
               About
             </p>
             <h1 className="max-w-4xl text-4xl sm:text-5xl">
-              In-home fitness and wellness built for the Parkinson&apos;s community
+              In-home personal trainer for older adults in Atlanta
             </h1>
             <p className="mt-6 max-w-3xl text-xl text-muted">
               Time Strong Health provides personalized, one-on-one fitness and
@@ -113,8 +115,8 @@ export default function AboutPage() {
       <Section tone="muted">
         <SectionHeading
           eyebrow="Every session"
-          title="Personalized, progressive fitness"
-          description="We focus on the foundations that support independence at home and in the community."
+          title="Parkinson's fitness in Atlanta"
+          description="Personalized, progressive fitness focused on the foundations that support independence at home and in the community."
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {focusAreas.map((item) => (
