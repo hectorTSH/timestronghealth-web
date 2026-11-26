@@ -3,7 +3,7 @@
  * Preserved for a future pass: minor edits, then bios for Ryan Marsh
  * (owner, Athens Personal Fitness) and Toni Haynes (lead trainer, Athens).
  * Not linked in the public nav. The public landing is /athens.
- * The shared interest form mentions January 2027; the longer copy below
+ * The shared interest form mentions February 2027; the longer copy below
  * is the earlier coming-soon draft, kept intact until that pass.
  */
 import type { Metadata } from "next";
